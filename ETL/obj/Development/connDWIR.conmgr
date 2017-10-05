@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ObjectName="connDWIR"
+  DTS:DTSID="{D31E9785-7BAF-404F-A81A-B07A29CDECFA}"
+  DTS:CreationName="OLEDB">
+  <DTS:ObjectData>
+    <DTS:ConnectionManager
+      DTS:ConnectionString="Data Source=.;User ID=sa;Initial Catalog=IR;Provider=SQLNCLI11.1;Auto Translate=False;">
+      <DTS:Password
+        DTS:Name="Password"
+        Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAH0HjcbS61kyeAqPIah0B1AAAAAACAAAAAAAQZgAAAAEAACAAAACJG1ro+De38LhvjiJzZUR4wdkRGkSgVXa6Y9lGIgbp5gAAAAAOgAAAAAIAACAAAAALIV1nqmj2asf++F+VlNggXSHrV6ooiacTeQVpQdhZ9YAAAAB5BT4KHOWzEDg/Hhmx4xxoEIg8VD2vNDLoUYj/VDbAIRzZ4gLP1bK66Z+RY3wQ3CJ8XotwonXXwFaFGo2AdFC9LmfD9Oz4O7O/1egi7MpNGh744FXuyEZxynUwW+zJo1iqwx6nq76c/a/EU1jWShPoNDVjKPjlakfzoHIvxwvQ1UAAAADY56mj88RBWfhjszzyJd5CC6xH8Yv8cqS6nkkivDCRKQnKEwjSrzAoKADeHOPm8wQHxNYZI9/4xWV+2Ym36YSn</DTS:Password>
+    </DTS:ConnectionManager>
+  </DTS:ObjectData>
+</DTS:ConnectionManager>
