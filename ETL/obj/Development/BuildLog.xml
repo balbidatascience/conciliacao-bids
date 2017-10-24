@@ -2,18 +2,18 @@
 <BuildLog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <ProjectInfo>
     <Name>ETL</Name>
-    <LastWriteTime>2017-10-05T22:27:11.9455231Z</LastWriteTime>
+    <LastWriteTime>2017-10-05T22:30:43.7989605Z</LastWriteTime>
     <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
   </ProjectInfo>
   <LastBuildInfos>
     <ProjectBuildItemInfo>
       <Name>LoadDWIR.dtsx</Name>
-      <LastWriteTime>2017-10-05T22:27:12.0001685Z</LastWriteTime>
+      <LastWriteTime>2017-10-12T19:33:04.5431024Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>ScriptCarga.dtsx</Name>
-      <LastWriteTime>2017-10-05T22:27:12.0152085Z</LastWriteTime>
+      <LastWriteTime>2017-10-05T22:30:43.8636326Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
   </LastBuildInfos>
