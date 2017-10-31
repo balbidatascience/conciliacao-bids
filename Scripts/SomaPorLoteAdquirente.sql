@@ -1,8 +1,125 @@
 use IR
 
+/****************************************************************************************************************************************************************
+* ANALISE DE QUANTO VENDI VS QUANDO ESTOU RECEBENDO
+****************************************************************************************************************************************************************/
+--drop table #tmpCaixa
+--drop table #tmpVenda
+
+117166948135752
+
+select * from #tmpCaixa where LoteUnico = '171661210131819'
+select * from dsFluxoCaixa where LoteUnico = '171661210131819' order by DataVencimento
+select * from #tmpVenda where LoteUnico = '171661210131819'
+select * from dimCancelamento where LoteUnico = '171661210131819'
+select * from dimTransacaoAdquirente a inner join fatTransacaoAdquirente b on a.IdTransacaoAdquirente = b.IdTransacaoAdquirente where LoteUnico = '171661210131819'
+
+select * from dsMovimentoFinanceiro where [Lote Único] = '171661210131819'
+
+
+select a.IdLoteVenda, a.Lote, a.LoteUnico, a.Adquirente, c.DATA, sum(b.ValorBruto) as ValorBrutoCaixa, 
+		sum(b.ValorComissao)as ValorComissaoCaixa, 
+		sum(b.ValorBruto-b.ValorComissao) as ValorLiquidoCaixa, 
+		sum(b.ValorAntecipacao) as AntecipacaoCaixa, 
+		sum(b.TaxaAntecipacao) as TaxaAntecipacaoCaixa, 
+		sum(b.ValorOutrosAjustes) as OutrosAjustesCaixa,
+		sum(b.ValorCancelamentoLiquido) as CancelamentoLiquidoCaixa, 
+		sum(b.ValorCBKLiquido) as ValorCBKLiquidoCaixa, 
+		sum(b.ValorPrevisto) as ValorPrevistoCaixa, 
+		sum(b.ValorPago) as ValorPagoCaixa, 
+		sum(b.Saldo) as SaldoCaixa
+		into #tmpCaixa
+from dimLoteVenda a 
+inner join fatFluxoCaixa b on a.IdLoteVenda = b.IdLoteVenda
+left join dimTempo c on b.IdDataLoteVenda = c.IdTempo
+group by a.IdLoteVenda, a.Lote, a.LoteUnico, a.Adquirente, c.DATA
+
+
+-- Visão de venda vs realizado
+select a.IdLoteVenda, Lote, a.LoteUnico, a.Adquirente, 
+		count(b.IdTransacaoAdquirente) as QtdeTransacao, 
+		sum(b.ValorBrutoAdquirente) as ValorBrutoAdquirente, 
+		sum(b.ValorComissaoAdquirente) as ValorComissaoAdquirente, 
+		sum(b.ValorLiquidoAdquirente) as Liquido, 
+		sum(b.ValorCancelado) as ValorCancelado, 
+		sum(b.ValorCanceladoLiquido) as ValorCanceladoLiquido, 
+		sum(b.ValorChargeback) as ValorChargeback, 
+		sum(b.ValorChargebackLiquido) as ValorChargebackLiquido,
+		sum(b.ValorLiquidoAdquirente - isnull(b.ValorCanceladoLiquido, 0) - isnull(b.ValorChargebackLiquido, 0) + isnull(b.ValorEstornoLiquido, 0)) as Saldo
+		into #tmpVenda
+from dimLoteVenda a
+inner join fatTransacaoAdquirente b on a.IdLoteVenda = b.IdLoteVenda
+group by a.IdLoteVenda, Lote, a.LoteUnico, a.Adquirente
+order by LoteUnico
+
+-- Fazer o join com as tabelas tmp
+
+-- Comparativo Venda vs Caixa (detalhe)
+select	a.IdLoteVenda, a.Lote, a.LoteUnico, a.Adquirente, a.DATA, 
+		a.ValorBrutoCaixa, b.ValorBrutoAdquirente, (a.ValorBrutoCaixa - b.ValorBrutoAdquirente) as diffBruto,
+		a.ValorComissaoCaixa, b.ValorComissaoAdquirente, (a.ValorComissaoCaixa - b.ValorComissaoAdquirente) as diffComissao, 
+		a.ValorLiquidoCaixa, b.Liquido, (a.ValorLiquidoCaixa - b.Liquido) as diffLiquido,
+		a.CancelamentoLiquidoCaixa, b.ValorCanceladoLiquido,  (a.CancelamentoLiquidoCaixa - b.ValorCanceladoLiquido) as diffCancelamento,
+		b.ValorCancelado, 
+		a.ValorCBKLiquidoCaixa, b.ValorChargebackLiquido, (a.ValorCBKLiquidoCaixa - b.ValorChargebackLiquido) as diffCBK,
+		b.ValorChargeback, 
+		a.AntecipacaoCaixa, a.TaxaAntecipacaoCaixa, 
+		a.ValorPrevistoCaixa, b.Saldo as ValorPrevistoVenda, (a.ValorPrevistoCaixa - b.Saldo) as diffPrevisto,
+		a.ValorPagoCaixa, a.SaldoCaixa
+from #tmpCaixa a
+left join #tmpVenda b on a.IdLoteVenda = b.IdLoteVenda
+order by a.DATA, a.LoteUnico, a.Lote
+
+-- Comparativo Venda vs Caixa (por lote)
+select	a.Lote, a.LoteUnico, a.Adquirente, 
+		sum(a.ValorBrutoCaixa) as ValorBrutoCaixa, 
+		sum(b.ValorBrutoAdquirente) as ValorBrutoAdquirente, 
+		sum(a.ValorBrutoCaixa - b.ValorBrutoAdquirente) as diffBruto,
+		sum(a.ValorComissaoCaixa) as ValorComissaoCaixa, 
+		sum(b.ValorComissaoAdquirente) as ValorComissaoAdquirente, 
+		sum(a.ValorComissaoCaixa - b.ValorComissaoAdquirente) as diffComissao, 
+		sum(a.ValorLiquidoCaixa) as ValorLiquidoCaixa, 
+		sum(b.Liquido) as LiquidoVenda, 
+		sum(a.ValorLiquidoCaixa - b.Liquido) as diffLiquido,
+		sum(a.CancelamentoLiquidoCaixa) as CancelamentoLiquidoCaixa, 
+		sum(b.ValorCanceladoLiquido) as ValorCanceladoLiquido,  
+		sum(a.CancelamentoLiquidoCaixa - b.ValorCanceladoLiquido) as diffCancelamento,
+		sum(b.ValorCancelado) as ValorCancelado, 
+		sum(a.ValorCBKLiquidoCaixa) as ValorCBKLiquidoCaixa, 
+		sum(b.ValorChargebackLiquido) as ValorChargebackLiquido, 
+		sum(a.ValorCBKLiquidoCaixa - b.ValorChargebackLiquido) as diffCBK,
+		sum(b.ValorChargeback) as ValorChargeback, 
+		sum(a.AntecipacaoCaixa) as AntecipacaoCaixa, 
+		sum(a.TaxaAntecipacaoCaixa) as TaxaAntecipacaoCaixa, 
+		sum(a.ValorPrevistoCaixa) as ValorPrevistoCaixa, 
+		sum(b.Saldo) as ValorPrevistoVenda, 
+		sum(a.ValorPrevistoCaixa - b.Saldo) as diffPrevisto,
+		sum(a.ValorPagoCaixa) as ValorPagoCaixa, 
+		sum(a.SaldoCaixa) as SaldoCaixa
+from #tmpCaixa a
+left join #tmpVenda b on a.IdLoteVenda = b.IdLoteVenda
+group by a.LoteUnico, a.Lote, a.Adquirente
+order by a.LoteUnico, a.Lote, a.Adquirente
+
+
+
+
+select loteunico, count(Lote) from dimLoteVenda group by LoteUnico having count(Lote) > 1
+
+
+select * from dimLoteVenda where LoteUnico in (171607450974060000,
+171807450554062000,
+171547450710060000,
+171787450554062000)
+order by LoteUnico
+
+
+
 --select top 1000 * from dimTransacaoAdquirente
 
-select * from dsFluxoCaixa where LoteUnico is null
+select * from dimTempo
+
+select * from dsFluxoCaixa where LoteUnico = '171695120076957'
 
 171531200038914
 171531200039208
