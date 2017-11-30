@@ -7,12 +7,12 @@
   DTS:CreatorName="LAPTOP-TCIELA37\gabri"
   DTS:DTSID="{E444C19D-6844-4235-B585-E8D83504D291}"
   DTS:ExecutableType="Microsoft.Package"
-  DTS:LastModifiedProductVersion="13.0.4001.0"
+  DTS:LastModifiedProductVersion="14.0.1000.169"
   DTS:LocaleID="1046"
   DTS:ObjectName="LoadDWIR"
   DTS:PackageType="5"
-  DTS:VersionBuild="135"
-  DTS:VersionGUID="{4857666A-95DE-41D7-95BB-E6AB628DFEE4}">
+  DTS:VersionBuild="137"
+  DTS:VersionGUID="{3F0BDC79-F36E-4468-BB2A-6B431A9413D4}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
@@ -26,7 +26,7 @@
       DTS:LocaleID="-1"
       DTS:ObjectName="Clear dimTransacaoIRNaoConciliada"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2016; © 2015 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="2">
+      DTS:ThreadHint="0">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -43,7 +43,7 @@
       DTS:LocaleID="-1"
       DTS:ObjectName="Clear DS"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2016; © 2015 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="1">
+      DTS:ThreadHint="0">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -60,7 +60,7 @@
       DTS:LocaleID="-1"
       DTS:ObjectName="Clear DS Sales IR"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2016; © 2015 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="0">
+      DTS:ThreadHint="1">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -77,7 +77,7 @@
       DTS:LocaleID="-1"
       DTS:ObjectName="Load dimAdquirente"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2016; © 2015 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="6">
+      DTS:ThreadHint="1">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -94,7 +94,7 @@
       DTS:LocaleID="-1"
       DTS:ObjectName="Load dimCancelamento"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2016; © 2015 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="4">
+      DTS:ThreadHint="2">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -111,7 +111,7 @@
       DTS:LocaleID="-1"
       DTS:ObjectName="Load dimDomicilioBancario"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2016; © 2015 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="3">
+      DTS:ThreadHint="8">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -128,7 +128,7 @@
       DTS:LocaleID="-1"
       DTS:ObjectName="Load dimLoteVenda"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2016; © 2015 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="1">
+      DTS:ThreadHint="9">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -145,7 +145,7 @@
       DTS:LocaleID="-1"
       DTS:ObjectName="Load dimMeioCaptura"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2016; © 2015 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="7">
+      DTS:ThreadHint="5">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -163,7 +163,7 @@
       DTS:LocaleID="-1"
       DTS:ObjectName="Load dimPagamento"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2016; © 2015 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="9">
+      DTS:ThreadHint="7">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -180,7 +180,7 @@
       DTS:LocaleID="-1"
       DTS:ObjectName="Load dimProduto"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2016; © 2015 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="2">
+      DTS:ThreadHint="3">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -198,7 +198,7 @@
       DTS:LocaleID="-1"
       DTS:ObjectName="Load dimTempo"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2016; © 2015 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="8">
+      DTS:ThreadHint="4">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -215,7 +215,7 @@
       DTS:LocaleID="-1"
       DTS:ObjectName="Load dimTransacaoAdquirente"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2016; © 2015 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="5">
+      DTS:ThreadHint="0">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -232,7 +232,7 @@
       DTS:LocaleID="-1"
       DTS:ObjectName="Load dimTransacaoIR"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2016; © 2015 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="2">
+      DTS:ThreadHint="0">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -249,7 +249,7 @@
       DTS:LocaleID="-1"
       DTS:ObjectName="Load dimTransacaoIRNaoConciliada"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2016; © 2015 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="2">
+      DTS:ThreadHint="0">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -266,7 +266,7 @@
       DTS:LocaleID="-1"
       DTS:ObjectName="Load dimVenda (Bileto)"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2016; © 2015 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="0">
+      DTS:ThreadHint="6">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -283,7 +283,7 @@
       DTS:LocaleID="-1"
       DTS:ObjectName="Load dimVenda (Legado)"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2016; © 2015 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="0">
+      DTS:ThreadHint="6">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -300,7 +300,7 @@
       DTS:LocaleID="-1"
       DTS:ObjectName="Load fatCancelamento"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2016; © 2015 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="2">
+      DTS:ThreadHint="0">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -317,12 +317,12 @@
       DTS:LocaleID="-1"
       DTS:ObjectName="Load fatConciliacaoLoteVenda"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2016; © 2015 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="0">
+      DTS:ThreadHint="1">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
           SQLTask:Connection="{D31E9785-7BAF-404F-A81A-B07A29CDECFA}"
-          SQLTask:SqlStatementSource="truncate table fatConciliacaoLoteVenda&#xA;--  84454&#xA;insert into fatConciliacaoLoteVenda&#xA;(IdLoteVenda, IdDataVenda, ValorVenda, ValorCanceladoVenda, ValorVendaValido)&#xA;select a.IdLoteVenda as IdLoteVenda, &#xA;&#x9;&#x9;a.IdDataVenda as IdDataVenda, &#xA;&#x9;&#x9;sum(isnull(a.ValorVenda,0))as ValorVenda, &#xA;&#x9;&#x9;sum(isnull(a.ValorCanceladoVenda, 0)) as ValorCanceladoVenda, &#xA;&#x9;&#x9;sum(iif(b.IsCanceladaMesmoDia = 0, isnull(a.ValorVenda,0), 0)) as VendaValido&#xA;from fatConciliacaoVenda a&#xA;inner join dimVenda b on a.IdVenda = b.IdVenda&#xA;where a.IdLoteVenda not in (select IdLoteVenda from fatConciliacaoLoteVenda)&#xA;group by a.IdLoteVenda, a.IdDataVenda&#xA;order by IdLoteVenda, IdDataVenda&#xA;&#xA;--=====================================================&#xA;-- Setando os valores de fluxo de caixa do lote. &#xA;select&#x9;a.IdLoteVenda as IdLoteVenda, &#xA;&#x9;&#x9;a.IdDataLoteVenda as IdDataVenda,&#xA;&#x9;&#x9;isnull(a.IdDataVencimento, -1) as IdDataPagamento, &#xA;&#x9;&#x9;a.IdDomicilioBancario, &#xA;&#x9;&#x9;sum(a.ValorBruto) as ValorBruto, &#xA;&#x9;&#x9;sum(a.ValorCancelamentoLiquido) as ValorCanceladoLiquido, &#xA;&#x9;&#x9;sum(a.ValorCBKLiquido) as ValorCBKLiquido, &#xA;&#x9;&#x9;sum(a.ValorComissao) as ValorComissao, &#xA;&#x9;&#x9;sum(a.ValorAntecipacaoCedida) as VlrAntecipacaoCedida, &#xA;&#x9;&#x9;sum(a.ValorAntecipacao) as VlrAntecipacao, &#xA;&#x9;&#x9;sum(a.TaxaAntecipacao) as TaxaAntecipacao, &#xA;&#x9;&#x9;sum(a.ValorOutrosAjustes) as ValorOutrosAjustes, &#xA;&#x9;&#x9;sum(a.ValorPrevisto)as ValorPrevisto, &#xA;&#x9;&#x9;sum(a.ValorPago) as ValorPago&#xA;into #tmp_LoteVendaScoreCard&#xA;from fatFluxoCaixa a &#xA;group by a.IdLoteVenda, a.IdDataLoteVenda, a.IdDataVencimento, a.IdDomicilioBancario&#xA;&#xA;-- Atualiza os valores dos lotes. &#xA;update fatConciliacaoLoteVenda&#xA;set IdDataPagamento = b.IdDataPagamento, &#xA;IdDomicilioBancario = b.IdDomicilioBancario, &#xA;ValorBrutoAdquirente = b.ValorBruto, &#xA;ValorCanceladoLiquido = b.ValorCanceladoLiquido, &#xA;ValorCBKLiquido = b.ValorCBKLiquido, &#xA;ComissaoAdquirente = b.ValorComissao, &#xA;ValorAntecipacaoCedida = b.VlrAntecipacaoCedida, &#xA;ValorAntecipacao = b.VlrAntecipacao, &#xA;TaxaAntecipacao = b.TaxaAntecipacao, &#xA;ValorOutrosAjustes = b.ValorOutrosAjustes, &#xA;ValorPrevistoConciliador = b.ValorPrevisto, &#xA;ValorPago = b.ValorPago&#xA;from fatConciliacaoLoteVenda a &#xA;inner join #tmp_LoteVendaScoreCard b on a.IdLoteVenda = b.IdLoteVenda&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;and a.IdDataVenda = b.IdDataVenda&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;and a.IdDataPagamento = b.IdDataPagamento&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;and a.IdDomicilioBancario = b.IdDomicilioBancario&#xA;&#xA;-- Setando os valores de fluxo de caixa que só geram movimento bancário. &#xA;insert into fatConciliacaoLoteVenda&#xA;(IdLoteVenda, IdDataVenda, IdDataPagamento, ValorBrutoAdquirente,  &#xA; IdDomicilioBancario, ValorCanceladoLiquido, ValorCBKLiquido, &#xA; ComissaoAdquirente, ValorAntecipacaoCedida, ValorAntecipacao, &#xA; TaxaAntecipacao, ValorOutrosAjustes, ValorPrevistoConciliador, &#xA; ValorPago)&#xA;select a.IdLoteVenda, &#xA;&#x9;a.IdDataVenda, &#xA;&#x9;a.IdDataPagamento, &#xA;&#x9;a.ValorBruto, &#xA;&#x9;a.IdDomicilioBancario, &#xA;&#x9;a.ValorCanceladoLiquido, &#xA;&#x9;a.ValorCBKLiquido, &#xA;&#x9;a.ValorComissao, &#xA;&#x9;a.VlrAntecipacaoCedida,&#xA;&#x9;a.VlrAntecipacao, &#xA;&#x9;a.TaxaAntecipacao, &#xA;&#x9;a.ValorOutrosAjustes, &#xA;&#x9;a.ValorPrevisto, &#xA;&#x9;a.ValorPago&#xA;from #tmp_LoteVendaScoreCard a&#xA;left join fatConciliacaoLoteVenda b on a.IdLoteVenda = b.IdLoteVenda&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;and a.IdDataVenda = b.IdDataVenda&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;and a.IdDataPagamento = b.IdDataPagamento&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;and a.IdDomicilioBancario = b.IdDomicilioBancario&#xA;where b.IdLoteVenda is null&#xA;&#xA;drop table #tmp_LoteVendaScoreCard&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          SQLTask:SqlStatementSource="truncate table fatConciliacaoLoteVenda&#xA;&#xA;&#xA;insert into fatConciliacaoLoteVenda&#xA;(IdLoteVenda, IdDataVenda, ValorVenda, ValorCanceladoVenda, ValorVendaValido)&#xA;select a.IdLoteVenda as IdLoteVenda, &#xA;&#x9;&#x9;a.IdDataVenda as IdDataVenda, &#xA;&#x9;&#x9;sum(isnull(a.ValorVenda,0))as ValorVenda, &#xA;&#x9;&#x9;sum(isnull(a.ValorCanceladoVenda, 0)) as ValorCanceladoVenda, &#xA;&#x9;&#x9;sum(iif(b.IsCanceladaMesmoDia = 0, isnull(a.ValorVenda,0), 0)) as VendaValido&#xA;from fatConciliacaoVenda a&#xA;inner join dimVenda b on a.IdVenda = b.IdVenda&#xA;where a.IdLoteVenda not in (select IdLoteVenda from fatConciliacaoLoteVenda)&#xA;group by a.IdLoteVenda, a.IdDataVenda&#xA;order by IdLoteVenda, IdDataVenda&#xA;&#xA;--=====================================================&#xA;-- Setando os valores de fluxo de caixa do lote. &#xA;select&#x9;a.IdLoteVenda as IdLoteVenda, &#xA;&#x9;&#x9;a.IdDataLoteVenda as IdDataVenda,&#xA;&#x9;&#x9;isnull(a.IdDataVencimento, -1) as IdDataPagamento, &#xA;&#x9;&#x9;a.IdDomicilioBancario, &#xA;&#x9;&#x9;sum(a.ValorBruto) as ValorBruto, &#xA;&#x9;&#x9;sum(a.ValorCancelamentoLiquido) as ValorCanceladoLiquido, &#xA;&#x9;&#x9;sum(a.ValorCBKLiquido) as ValorCBKLiquido, &#xA;&#x9;&#x9;sum(a.ValorComissao) as ValorComissao, &#xA;&#x9;&#x9;sum(a.ValorAntecipacaoCedida) as VlrAntecipacaoCedida, &#xA;&#x9;&#x9;sum(a.ValorAntecipacao) as VlrAntecipacao, &#xA;&#x9;&#x9;sum(a.TaxaAntecipacao) as TaxaAntecipacao, &#xA;&#x9;&#x9;sum(a.ValorOutrosAjustes) as ValorOutrosAjustes, &#xA;&#x9;&#x9;sum(a.ValorPrevisto)as ValorPrevisto, &#xA;&#x9;&#x9;sum(a.ValorPago) as ValorPago&#xA;into #tmp_LoteVendaScoreCard&#xA;from fatFluxoCaixa a &#xA;group by a.IdLoteVenda, a.IdDataLoteVenda, a.IdDataVencimento, a.IdDomicilioBancario&#xA;&#xA;-- Atualiza os valores dos lotes. &#xA;update fatConciliacaoLoteVenda&#xA;set IdDataPagamento = b.IdDataPagamento, &#xA;IdDomicilioBancario = b.IdDomicilioBancario, &#xA;ValorBrutoAdquirente = b.ValorBruto, &#xA;ValorCanceladoLiquido = b.ValorCanceladoLiquido, &#xA;ValorCBKLiquido = b.ValorCBKLiquido, &#xA;ComissaoAdquirente = b.ValorComissao, &#xA;ValorAntecipacaoCedida = b.VlrAntecipacaoCedida, &#xA;ValorAntecipacao = b.VlrAntecipacao, &#xA;TaxaAntecipacao = b.TaxaAntecipacao, &#xA;ValorOutrosAjustes = b.ValorOutrosAjustes, &#xA;ValorPrevistoConciliador = b.ValorPrevisto, &#xA;ValorPago = b.ValorPago&#xA;from fatConciliacaoLoteVenda a &#xA;inner join #tmp_LoteVendaScoreCard b on a.IdLoteVenda = b.IdLoteVenda&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;and a.IdDataVenda = b.IdDataVenda&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;and a.IdDataPagamento = b.IdDataPagamento&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;and a.IdDomicilioBancario = b.IdDomicilioBancario&#xA;&#xA;-- Setando os valores de fluxo de caixa que só geram movimento bancário. &#xA;insert into fatConciliacaoLoteVenda&#xA;(IdLoteVenda, IdDataVenda, IdDataPagamento, ValorBrutoAdquirente,  &#xA; IdDomicilioBancario, ValorCanceladoLiquido, ValorCBKLiquido, &#xA; ComissaoAdquirente, ValorAntecipacaoCedida, ValorAntecipacao, &#xA; TaxaAntecipacao, ValorOutrosAjustes, ValorPrevistoConciliador, &#xA; ValorPago)&#xA;select a.IdLoteVenda, &#xA;&#x9;a.IdDataVenda, &#xA;&#x9;a.IdDataPagamento, &#xA;&#x9;a.ValorBruto, &#xA;&#x9;a.IdDomicilioBancario, &#xA;&#x9;a.ValorCanceladoLiquido, &#xA;&#x9;a.ValorCBKLiquido, &#xA;&#x9;a.ValorComissao, &#xA;&#x9;a.VlrAntecipacaoCedida,&#xA;&#x9;a.VlrAntecipacao, &#xA;&#x9;a.TaxaAntecipacao, &#xA;&#x9;a.ValorOutrosAjustes, &#xA;&#x9;a.ValorPrevisto, &#xA;&#x9;a.ValorPago&#xA;from #tmp_LoteVendaScoreCard a&#xA;left join fatConciliacaoLoteVenda b on a.IdLoteVenda = b.IdLoteVenda&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;and a.IdDataVenda = b.IdDataVenda&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;and a.IdDataPagamento = b.IdDataPagamento&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;and a.IdDomicilioBancario = b.IdDomicilioBancario&#xA;where b.IdLoteVenda is null&#xA;&#xA;drop table #tmp_LoteVendaScoreCard&#xA;&#xA;&#xA;-- Seta na dimLoteVenda os lotes já quitados. &#xA;select&#x9;IdLoteVenda, &#xA;&#x9;&#x9;sum(ValorVenda) as TotalVenda,&#xA;&#x9;&#x9;sum(ValorBrutoAdquirente) as Transacionado,  &#xA;&#x9;&#x9;sum(ValorPrevistoConciliador) as ValorPrevisto,&#xA;&#x9;&#x9;sum(ValorPago) as ValorPago, &#xA;&#x9;&#x9;sum(ValorPago) - sum(ValorPrevistoConciliador) as Saldo&#xA;into #tmpLote&#xA;from fatConciliacaoLoteVenda&#xA;group by IdLoteVenda&#xA;&#xA;update dimLoteVenda&#xA;set Quitado = 'Sim'&#xA;from dimLoteVenda a &#xA;inner join #tmpLote b on a.IdLoteVenda = b.IdLoteVenda &#xA;where Saldo = 0&#xA;&#xA;drop table #tmpLote&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
@@ -334,7 +334,7 @@
       DTS:LocaleID="-1"
       DTS:ObjectName="Load fatConciliacaoVenda"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2016; © 2015 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="0">
+      DTS:ThreadHint="1">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -351,7 +351,7 @@
       DTS:LocaleID="-1"
       DTS:ObjectName="Load fatFluxoCaixa"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2016; © 2015 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="1">
+      DTS:ThreadHint="3">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -368,7 +368,7 @@
       DTS:LocaleID="-1"
       DTS:ObjectName="Load fatTransacao"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2016; © 2015 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="2">
+      DTS:ThreadHint="0">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -385,7 +385,7 @@
       DTS:LocaleID="-1"
       DTS:ObjectName="Load fatTransacaoIR"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2016; © 2015 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="2">
+      DTS:ThreadHint="0">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -419,7 +419,7 @@
       DTS:LocaleID="-1"
       DTS:ObjectName="Set Cancelamento Venda"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2016; © 2015 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="0">
+      DTS:ThreadHint="1">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -436,7 +436,7 @@
       DTS:LocaleID="-1"
       DTS:ObjectName="set Situacao"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2016; © 2015 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="2">
+      DTS:ThreadHint="0">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -453,7 +453,7 @@
       DTS:LocaleID="-1"
       DTS:ObjectName="Set StatusCancelamento"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2016; © 2015 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="2">
+      DTS:ThreadHint="0">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -470,7 +470,7 @@
       DTS:LocaleID="-1"
       DTS:ObjectName="Set TransacaoIR fatTransacao"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2016; © 2015 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="2">
+      DTS:ThreadHint="0">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData

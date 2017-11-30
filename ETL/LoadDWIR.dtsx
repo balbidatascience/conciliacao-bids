@@ -7,12 +7,12 @@
   DTS:CreatorName="LAPTOP-TCIELA37\gabri"
   DTS:DTSID="{E444C19D-6844-4235-B585-E8D83504D291}"
   DTS:ExecutableType="Microsoft.Package"
-  DTS:LastModifiedProductVersion="13.0.4001.0"
+  DTS:LastModifiedProductVersion="14.0.1000.169"
   DTS:LocaleID="1046"
   DTS:ObjectName="LoadDWIR"
   DTS:PackageType="5"
-  DTS:VersionBuild="137"
-  DTS:VersionGUID="{3F0BDC79-F36E-4468-BB2A-6B431A9413D4}">
+  DTS:VersionBuild="139"
+  DTS:VersionGUID="{5A02D8C8-63F1-4710-B78B-A5A49D72AF16}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
@@ -111,7 +111,7 @@
       DTS:LocaleID="-1"
       DTS:ObjectName="Load dimDomicilioBancario"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2016; © 2015 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="6">
+      DTS:ThreadHint="7">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -128,7 +128,7 @@
       DTS:LocaleID="-1"
       DTS:ObjectName="Load dimLoteVenda"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2016; © 2015 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="7">
+      DTS:ThreadHint="6">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -145,7 +145,7 @@
       DTS:LocaleID="-1"
       DTS:ObjectName="Load dimMeioCaptura"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2016; © 2015 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="4">
+      DTS:ThreadHint="3">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -180,7 +180,7 @@
       DTS:LocaleID="-1"
       DTS:ObjectName="Load dimProduto"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2016; © 2015 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="3">
+      DTS:ThreadHint="5">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -198,7 +198,7 @@
       DTS:LocaleID="-1"
       DTS:ObjectName="Load dimTempo"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2016; © 2015 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="5">
+      DTS:ThreadHint="4">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -351,12 +351,28 @@
       DTS:LocaleID="-1"
       DTS:ObjectName="Load fatFluxoCaixa"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2016; © 2015 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="3">
+      DTS:ThreadHint="5">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
           SQLTask:Connection="{D31E9785-7BAF-404F-A81A-B07A29CDECFA}"
           SQLTask:SqlStatementSource="-- separa as linhas distintas.&#xA;SELECT distinct [DataVencimento]&#xA;      ,[Estabelecimento]&#xA;      ,[CategoriaEstabelecimento]&#xA;      ,[DataLoteVenda]&#xA;      ,[MesAno]&#xA;      ,[Adquirente]&#xA;      ,[FiliacaoEstabelec]&#xA;      ,[Bandeira]&#xA;      ,[TipoVenda]&#xA;      ,[Produto]&#xA;      ,[Lote]&#xA;      ,[LoteUnico]&#xA;      ,[Parcela]&#xA;      ,[QtdeParcelas]&#xA;      ,[Banco]&#xA;      ,[Agencia]&#xA;      ,[Conta]&#xA;      ,[ValorBruto]&#xA;      ,[ValorComissao]&#xA;      ,[VendasAntecCedidas]&#xA;      ,[Cancelamentos]&#xA;      ,[Chargeback]&#xA;      ,[OutrosAjustes]&#xA;      ,[ValorAntecipacoes]&#xA;      ,[DescontosAntecCessoes]&#xA;      ,[ValorPrevisto]&#xA;      ,[ValorPago]&#xA;      ,[Saldo]&#xA;      ,[VendasCedidas]&#xA;      ,[CessoesAvulsas]&#xA;      ,[DescontosCessoesAvulsas]&#xA;&#x9;into #tmp&#xA;  FROM [dbo].[dsFluxoCaixa]&#xA;GO&#xA;&#xA;-- Load para a fato&#xA;INSERT INTO [dbo].[fatFluxoCaixa]&#xA;           ([IdLoteVenda]&#xA;           ,[IdDomicilioBancario]&#xA;           ,[IdProduto]&#xA;           ,[LoteUnico]&#xA;           ,[IdDataLoteVenda]&#xA;           ,[IdDataVencimento]&#xA;           ,[Parcela]&#xA;           ,[QtdeParcelas]&#xA;           ,[ValorBruto]&#xA;           ,[ValorComissao]&#xA;           ,[ValorAntecipacaoCedida]&#xA;           ,[ValorCancelamentoLiquido]&#xA;           ,[ValorCBKLiquido]&#xA;           ,[ValorOutrosAjustes]&#xA;           ,[ValorAntecipacao]&#xA;           ,[TaxaAntecipacao]&#xA;           ,[ValorPrevisto]&#xA;           ,[ValorPago]&#xA;           ,[Saldo])&#xA;select distinct b.IdLoteVenda, &#xA;&#x9;&#x9;isnull(c.IdDomicilioBancario, -1) as IdDomicilioBancario, &#xA;&#x9;&#x9;isnull(d.IdProduto, -1) as IdProduto, &#xA;&#x9;&#x9;isnull(a.LoteUnico, '-1') as LoteUnico, &#xA;&#x9;&#x9;isnull(e.IdTempo, -1) as IdDataLoteVenda, &#xA;&#x9;&#x9;isnull(f.IdTempo, -1) as IdDataVencimento, &#xA;&#x9;&#x9;isnull(a.Parcela, 0) as Parcela, &#xA;&#x9;&#x9;isnull(a.QtdeParcelas, 0) as QtdeParcelas, &#xA;&#x9;&#x9;isnull(a.ValorBruto, 0) as ValorBruto, &#xA;&#x9;&#x9;isnull(a.ValorComissao, 0) as ValorComissao, &#xA;&#x9;&#x9;isnull(a.VendasAntecCedidas, 0) as ValorAntecipacaoCedida, &#xA;&#x9;&#x9;isnull(a.Cancelamentos, 0) as ValorCancelamentoLiquido, &#xA;&#x9;&#x9;isnull(a.Chargeback, 0) as ValorCahrgebackLiquido, &#xA;&#x9;&#x9;isnull(a.OutrosAjustes, 0) as ValorOutrosAjustes, &#xA;&#x9;&#x9;isnull(a.ValorAntecipacoes, 0) as ValorAntecipacao, &#xA;&#x9;&#x9;isnull(a.DescontosAntecCessoes, 0) as TaxaAntecipacao, &#xA;&#x9;&#x9;isnull(a.ValorPrevisto, 0) as ValorPrevisto, &#xA;&#x9;&#x9;isnull(a.ValorPago, 0) as ValorPago, &#xA;&#x9;&#x9;isnull(a.Saldo, 0) as Saldo &#xA;from #tmp a&#xA;left join dimLoteVenda b on isnull(a.Lote, '-1') = b.Lote&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;and isnull(a.LoteUnico, '-1') = b.LoteUnico&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;and isnull(a.FiliacaoEstabelec, '-1') = b.FiliacaoEstabelecimento&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;and a.Adquirente = b.Adquirente&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;and a.Estabelecimento = b.Estabelecimento&#xA;left join dimDomicilioBancario c on isnull(a.Banco, 0) = c.Banco&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;and isnull(a.Agencia, 0) = c.Agencia&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;and isnull(a.Conta, 0) = c.Conta&#xA;left join dimProduto d on a.TipoVenda = d.Tipo&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;and a.Produto = d.Produto&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;and a.Bandeira = d.Bandeira&#xA;left join dimTempo e on a.DataLoteVenda = e.DATA&#xA;left join dimTempo f on a.DataVencimento = f.DATA&#xA;left join fatFluxoCaixa g on isnull(a.LoteUnico, -1) = g.LoteUnico&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;and isnull(a.Lote, '-1') = b.Lote&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;and isnull(a.Parcela, 0) = g.Parcela&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;and isnull(a.ValorBruto, 0) = g.ValorBruto&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;and isnull(a.VendasAntecCedidas, 0) = g.ValorAntecipacaoCedida&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;and isnull(a.ValorPago, 0) = g.ValorPago&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;and isnull(a.ValorPrevisto, 0) = g.ValorPrevisto&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;and isnull(a.[Cancelamentos], 0) = g.ValorCancelamentoLiquido&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;and isnull(e.IdTempo, -1) = g.IdDataLoteVenda&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;and isnull(f.IdTempo, -1) = g.IdDataVencimento&#xA;where g.IdLoteVenda is null -- Somente registros novos&#xA;&#xA;drop table #tmp" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Load fatPagamentoRecebivel"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{CE20806F-4D8D-46C2-8149-AAC3B974B8D7}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Load fatPagamentoRecebivel"
+      DTS:ThreadHint="1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{D31E9785-7BAF-404F-A81A-B07A29CDECFA}"
+          SQLTask:SqlStatementSource="insert into fatIRPagamentoRecebivel&#xA;(IdDataPagamento, Empresa, Banco, Agencia, Conta, FormaRecebimento, Observacao, Valor)&#xA;select b.IdTempo, &#xA;&#x9;&#x9;a.Empresa, &#xA;&#x9;&#x9;a.Banco, &#xA;&#x9;&#x9;a.Agencia, &#xA;&#x9;&#x9;a.Conta, &#xA;&#x9;&#x9;a.FormaRecebimento, &#xA;&#x9;&#x9;a.Observacao, &#xA;&#x9;&#x9;a.Valor&#xA;from dsIRContaReceber a&#xA;inner join dimTempo b on a.Data = convert(date, b.DATA)&#xA;left join fatIRPagamentoRecebivel c on a.Banco = c.Banco&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;and a.Agencia = c.Agencia&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;and a.Conta = c.Conta&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;and a.Data = b.DATA&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;and a.Valor = c.Valor&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;and isnull(a.Observacao, '') = isnull(c.Observacao, '')&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;and isnull(a.Empresa, '') = isnull(c.Empresa, '')&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;and isnull(a.FormaRecebimento, '') = isnull(c.FormaRecebimento, '')&#xA;where c.IdIRPagamentoRecebivel is null" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
@@ -643,11 +659,11 @@
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint 27]"
       DTS:CreationName=""
-      DTS:DTSID="{1386EF23-A005-4A02-985E-E41230549EB3}"
+      DTS:DTSID="{6FA672C5-8857-49C3-9F74-BCCFC82837F6}"
       DTS:From="Package\Load fatConciliacaoLoteVenda"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint 27"
-      DTS:To="Package\Clear DS Sales IR" />
+      DTS:To="Package\Load fatPagamentoRecebivel" />
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint 28]"
       DTS:CreationName=""
@@ -656,6 +672,14 @@
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint 28"
       DTS:To="Package\Match Lote Venda x Lote Pagto" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 29]"
+      DTS:CreationName=""
+      DTS:DTSID="{2E28434A-D79B-4BDC-B1BC-2C4830C6E027}"
+      DTS:From="Package\Load fatPagamentoRecebivel"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 29"
+      DTS:To="Package\Clear DS Sales IR" />
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint 3]"
       DTS:CreationName=""
@@ -736,7 +760,7 @@
         <NodeLayout
           Size="165,42"
           Id="Package\Clear DS Sales IR"
-          TopLeft="1453,679" />
+          TopLeft="1193,642" />
         <NodeLayout
           Size="173,42"
           Id="Package\Load dimAdquirente"
@@ -796,11 +820,11 @@
         <NodeLayout
           Size="221,42"
           Id="Package\Load fatConciliacaoLoteVenda"
-          TopLeft="1183,681" />
+          TopLeft="1408,557" />
         <NodeLayout
           Size="201,42"
           Id="Package\Load fatConciliacaoVenda"
-          TopLeft="1187,533" />
+          TopLeft="1185,479" />
         <NodeLayout
           Size="168,42"
           Id="Package\Load fatFluxoCaixa"
@@ -820,7 +844,7 @@
         <NodeLayout
           Size="199,42"
           Id="Package\Set Cancelamento Venda"
-          TopLeft="1191,606" />
+          TopLeft="1421,479" />
         <NodeLayout
           Size="136,42"
           Id="Package\set Situacao"
@@ -1243,26 +1267,26 @@
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-664.25,420.5"
+              EndConnector="-656.6,366.5"
               Start="0,0"
-              End="-664.25,413">
+              End="-656.6,359">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,272.662847790507" />
+                    End="0,253.395178197065" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,272.662847790507"
-                    Point2="0,276.662847790507"
-                    Point3="-4,276.662847790507" />
+                    Point1="0,253.395178197065"
+                    Point2="0,257.395178197065"
+                    Point3="-4,257.395178197065" />
                   <mssgle:LineSegment
-                    End="-660.25,276.662847790507" />
+                    End="-652.6,257.395178197065" />
                   <mssgle:CubicBezierSegment
-                    Point1="-660.25,276.662847790507"
-                    Point2="-664.25,276.662847790507"
-                    Point3="-664.25,280.662847790507" />
+                    Point1="-652.6,257.395178197065"
+                    Point2="-656.6,257.395178197065"
+                    Point3="-656.6,261.395178197065" />
                   <mssgle:LineSegment
-                    End="-664.25,413" />
+                    End="-656.6,359" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1277,26 +1301,26 @@
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="313.97380952381,110.535714285714"
+              EndConnector="311.97380952381,56.535714285714"
               Start="0,0"
-              End="313.97380952381,103.035714285714">
+              End="311.97380952381,49.035714285714">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,46.5344846611133" />
+                    End="0,21.8468785843432" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,46.5344846611133"
-                    Point2="0,50.5344846611133"
-                    Point3="4,50.5344846611133" />
+                    Point1="0,21.8468785843432"
+                    Point2="0,25.8468785843432"
+                    Point3="4,25.8468785843432" />
                   <mssgle:LineSegment
-                    End="309.97380952381,50.5344846611133" />
+                    End="307.97380952381,25.8468785843432" />
                   <mssgle:CubicBezierSegment
-                    Point1="309.97380952381,50.5344846611133"
-                    Point2="313.97380952381,50.5344846611133"
-                    Point3="313.97380952381,54.5344846611133" />
+                    Point1="307.97380952381,25.8468785843432"
+                    Point2="311.97380952381,25.8468785843432"
+                    Point3="311.97380952381,29.8468785843432" />
                   <mssgle:LineSegment
-                    End="313.97380952381,103.035714285714" />
+                    End="311.97380952381,49.035714285714" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1311,26 +1335,26 @@
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="644.552380952381,185.428571428571"
+              EndConnector="642.552380952381,131.428571428571"
               Start="0,0"
-              End="644.552380952381,177.928571428571">
+              End="642.552380952381,123.928571428571">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,110.365335070804" />
+                    End="0,77.0601758591212" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,110.365335070804"
-                    Point2="0,114.365335070804"
-                    Point3="4,114.365335070804" />
+                    Point1="0,77.0601758591212"
+                    Point2="0,81.0601758591212"
+                    Point3="4,81.0601758591212" />
                   <mssgle:LineSegment
-                    End="640.552380952381,114.365335070804" />
+                    End="638.552380952381,81.0601758591212" />
                   <mssgle:CubicBezierSegment
-                    Point1="640.552380952381,114.365335070804"
-                    Point2="644.552380952381,114.365335070804"
-                    Point3="644.552380952381,118.365335070804" />
+                    Point1="638.552380952381,81.0601758591212"
+                    Point2="642.552380952381,81.0601758591212"
+                    Point3="642.552380952381,85.0601758591212" />
                   <mssgle:LineSegment
-                    End="644.552380952381,177.928571428571" />
+                    End="642.552380952381,123.928571428571" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1341,18 +1365,18 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 24]"
-          TopLeft="1289,575">
+          TopLeft="1386,500">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,31"
+              EndConnector="35,0"
               Start="0,0"
-              End="0,23.5">
+              End="27.5,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,23.5" />
+                    End="27.5,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1363,18 +1387,18 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 25]"
-          TopLeft="1292,648">
+          TopLeft="1519.5,521">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,33"
+              EndConnector="0,36"
               Start="0,0"
-              End="0,25.5">
+              End="0,28.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,25.5" />
+                    End="0,28.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1389,48 +1413,26 @@
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-470.7,331"
+              EndConnector="-472.7,277"
               Start="0,0"
-              End="-470.7,323.5">
+              End="-472.7,269.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,179.079251513484" />
+                    End="0,149.21133736929" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,179.079251513484"
-                    Point2="0,183.079251513484"
-                    Point3="-4,183.079251513484" />
+                    Point1="0,149.21133736929"
+                    Point2="0,153.21133736929"
+                    Point3="-4,153.21133736929" />
                   <mssgle:LineSegment
-                    End="-466.7,183.079251513484" />
+                    End="-468.7,153.21133736929" />
                   <mssgle:CubicBezierSegment
-                    Point1="-466.7,183.079251513484"
-                    Point2="-470.7,183.079251513484"
-                    Point3="-470.7,187.079251513484" />
+                    Point1="-468.7,153.21133736929"
+                    Point2="-472.7,153.21133736929"
+                    Point3="-472.7,157.21133736929" />
                   <mssgle:LineSegment
-                    End="-470.7,323.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint 27]"
-          TopLeft="1404,701">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="49,0"
-              Start="0,0"
-              End="41.5,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="41.5,0" />
+                    End="-472.7,269.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1658,6 +1660,54 @@
           Size="221,40"
           Id="6a390957-76cd-49ec-944f-eb7f0c9258e3"
           TopLeft="1137.75,29" />
+        <NodeLayout
+          Size="215,42"
+          Id="Package\Load fatPagamentoRecebivel"
+          TopLeft="1168,560" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 27]"
+          TopLeft="1408,579.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-25,0"
+              Start="0,0"
+              End="-17.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-17.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 29]"
+          TopLeft="1275.5,602">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,40"
+              Start="0,0"
+              End="0,32.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,32.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </Package>
