@@ -77,6 +77,18 @@ go
 SET IDENTITY_INSERT dbo.dimLoteVenda off
 go
 
+SET IDENTITY_INSERT [dbo].dimVenda on
+go
+INSERT INTO [dbo].dimVenda
+	(IdVenda, is_bileto, codigo_gateway)
+     VALUES
+           (-1, 
+		   0, 'N/A')
+go
+SET IDENTITY_INSERT dbo.dimVenda off
+go
+
+
 
 
 
