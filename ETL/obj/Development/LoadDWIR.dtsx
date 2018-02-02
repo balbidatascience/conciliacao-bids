@@ -11,8 +11,8 @@
   DTS:LocaleID="1046"
   DTS:ObjectName="LoadDWIR"
   DTS:PackageType="5"
-  DTS:VersionBuild="150"
-  DTS:VersionGUID="{2F057717-DCD0-4C77-AA97-3D7C2050259F}">
+  DTS:VersionBuild="158"
+  DTS:VersionGUID="{419449D6-6290-490E-B19F-6FFC3BAA3971}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
@@ -26,7 +26,7 @@
       DTS:LocaleID="-1"
       DTS:ObjectName="Clear dimTransacaoIRNaoConciliada"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2016; © 2015 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="0">
+      DTS:ThreadHint="1">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -43,7 +43,7 @@
       DTS:LocaleID="-1"
       DTS:ObjectName="Clear DS"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2016; © 2015 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="0">
+      DTS:ThreadHint="1">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -60,7 +60,7 @@
       DTS:LocaleID="-1"
       DTS:ObjectName="Clear DS Sales IR"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2016; © 2015 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="1">
+      DTS:ThreadHint="0">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -77,7 +77,7 @@
       DTS:LocaleID="-1"
       DTS:ObjectName="Load dimAdquirente"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2016; © 2015 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="3">
+      DTS:ThreadHint="7">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -94,7 +94,7 @@
       DTS:LocaleID="-1"
       DTS:ObjectName="Load dimCancelamento"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2016; © 2015 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="5">
+      DTS:ThreadHint="8">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -111,7 +111,7 @@
       DTS:LocaleID="-1"
       DTS:ObjectName="Load dimDomicilioBancario"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2016; © 2015 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="6">
+      DTS:ThreadHint="3">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -128,7 +128,7 @@
       DTS:LocaleID="-1"
       DTS:ObjectName="Load dimLoteVenda"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2016; © 2015 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="7">
+      DTS:ThreadHint="0">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -145,7 +145,7 @@
       DTS:LocaleID="-1"
       DTS:ObjectName="Load dimMeioCaptura"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2016; © 2015 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="0">
+      DTS:ThreadHint="1">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -163,7 +163,7 @@
       DTS:LocaleID="-1"
       DTS:ObjectName="Load dimPagamento"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2016; © 2015 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="8">
+      DTS:ThreadHint="2">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -198,7 +198,7 @@
       DTS:LocaleID="-1"
       DTS:ObjectName="Load dimTempo"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2016; © 2015 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="1">
+      DTS:ThreadHint="9">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -215,12 +215,12 @@
       DTS:LocaleID="-1"
       DTS:ObjectName="Load dimTransacaoAdquirente"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2016; © 2015 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="2">
+      DTS:ThreadHint="6">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
           SQLTask:Connection="{D31E9785-7BAF-404F-A81A-B07A29CDECFA}"
-          SQLTask:SqlStatementSource="MERGE INTO dimTransacaoAdquirente AS Target&#xA;USING (&#xA;&#x9;SELECT [NroAutorizacao]&#xA;&#x9;&#x9;&#x9;  ,[IDERP]&#xA;&#x9;&#x9;&#x9;  ,[IDEQUALS]&#xA;&#x9;&#x9;&#x9;  ,[Bandeira]&#xA;&#x9;&#x9;&#x9;  ,[Adquirente]&#xA;&#x9;&#x9;&#x9;  ,[LoteRO]&#xA;&#x9;&#x9;&#x9;  ,[Data]&#xA;&#x9;&#x9;&#x9;  ,[DtCaptura]&#xA;&#x9;&#x9;&#x9;  ,[Hora]&#xA;&#x9;&#x9;&#x9;  ,[NroCartao]&#xA;&#x9;&#x9;&#x9;  ,[OrigemCartao]&#xA;&#x9;&#x9;&#x9;  ,[NSU]&#xA;&#x9;&#x9;&#x9;  ,[TID]&#xA;&#x9;&#x9;&#x9;  ,[Parc]&#xA;&#x9;&#x9;&#x9;  ,[LoteUnico]&#xA;&#x9;&#x9;&#x9;  ,[NroReferencia]&#xA;&#x9;&#x9;&#x9;  ,replace(replace([Taxa], '%', ''), ',', '.') as Taxa&#xA;&#x9;&#x9;&#x9;  ,replace(replace([TxContrato], '%', ''), ',', '.') as TaxaContrato&#xA;&#x9;&#x9;&#x9;  ,[Situacao]&#xA;&#x9;&#x9;&#x9;  ,[DtSituacao]&#xA;&#x9;&#x9;&#x9;  ,[Conciliada]&#xA;&#x9;&#x9;&#x9;  ,[MJustificativa]&#xA;&#x9;&#x9;&#x9;  ,[NomeTarefa]&#xA;&#x9;&#x9;&#x9;  ,[SituacaoTarefa]&#xA;&#x9;&#x9;&#x9;  ,[ConciliacaoParam]&#xA;&#x9;&#x9;&#x9;  ,[DtRegistro]&#xA;&#x9;&#x9;FROM [dbo].[dsTransacaoAdquirente] &#xA;) AS Source (NroAutorizacao&#xA;&#x9;&#x9;&#x9;  ,[IDERP]&#xA;&#x9;&#x9;&#x9;  ,[IDEQUALS]&#xA;&#x9;&#x9;&#x9;  ,[Bandeira]&#xA;&#x9;&#x9;&#x9;  ,[Adquirente]&#xA;&#x9;&#x9;&#x9;  ,[LoteRO]&#xA;&#x9;&#x9;&#x9;  ,[Data]&#xA;&#x9;&#x9;&#x9;  ,[DtCaptura]&#xA;&#x9;&#x9;&#x9;  ,[Hora]&#xA;&#x9;&#x9;&#x9;  ,[NroCartao]&#xA;&#x9;&#x9;&#x9;  ,[OrigemCartao]&#xA;&#x9;&#x9;&#x9;  ,[NSU]&#xA;&#x9;&#x9;&#x9;  ,[TID]&#xA;&#x9;&#x9;&#x9;  ,[Parc]&#xA;&#x9;&#x9;&#x9;  ,[LoteUnico]&#xA;&#x9;&#x9;&#x9;  ,[NroReferencia]&#xA;&#x9;&#x9;&#x9;  ,Taxa&#xA;&#x9;&#x9;&#x9;  ,TaxaContrato&#xA;&#x9;&#x9;&#x9;  ,[Situacao]&#xA;&#x9;&#x9;&#x9;  ,[DtSituacao]&#xA;&#x9;&#x9;&#x9;  ,[Conciliada]&#xA;&#x9;&#x9;&#x9;  ,[MJustificativa]&#xA;&#x9;&#x9;&#x9;  ,[NomeTarefa]&#xA;&#x9;&#x9;&#x9;  ,[SituacaoTarefa]&#xA;&#x9;&#x9;&#x9;  ,[ConciliacaoParam]&#xA;&#x9;&#x9;&#x9;  ,[DtRegistro]&#xA;&#x9;&#x9;&#x9;)&#xA;ON (Target.IDEQUALS  = Source.[IDEQUALS])&#xA;&#xA;WHEN NOT MATCHED BY TARGET THEN&#xA; INSERT (NroAutorizacao&#xA;&#x9;&#x9;&#x9;  ,[IDERP]&#xA;&#x9;&#x9;&#x9;  ,[IDEQUALS]&#xA;&#x9;&#x9;&#x9;  ,[Bandeira]&#xA;&#x9;&#x9;&#x9;  ,[Adquirente]&#xA;&#x9;&#x9;&#x9;  ,[LoteRO]&#xA;&#x9;&#x9;&#x9;  ,[Data]&#xA;&#x9;&#x9;&#x9;  ,[DtCaptura]&#xA;&#x9;&#x9;&#x9;  ,[Hora]&#xA;&#x9;&#x9;&#x9;  ,[NroCartao]&#xA;&#x9;&#x9;&#x9;  ,[OrigemCartao]&#xA;&#x9;&#x9;&#x9;  ,[NSU]&#xA;&#x9;&#x9;&#x9;  ,[TID]&#xA;&#x9;&#x9;&#x9;  ,[Parc]&#xA;&#x9;&#x9;&#x9;  ,[LoteUnico]&#xA;&#x9;&#x9;&#x9;  ,[NroReferencia]&#xA;&#x9;&#x9;&#x9;  ,Taxa&#xA;&#x9;&#x9;&#x9;  ,TaxaContrato&#xA;&#x9;&#x9;&#x9;  ,[Situacao]&#xA;&#x9;&#x9;&#x9;  ,[DtSituacao]&#xA;&#x9;&#x9;&#x9;  ,[Conciliada]&#xA;&#x9;&#x9;&#x9;  ,[MJustificativa]&#xA;&#x9;&#x9;&#x9;  ,[NomeTarefa]&#xA;&#x9;&#x9;&#x9;  ,[SituacaoTarefa]&#xA;&#x9;&#x9;&#x9;  ,[ConciliacaoParam]&#xA;&#x9;&#x9;&#x9;  ,[DtRegistro])&#xA; VALUES (Source.NroAutorizacao &#xA;&#x9;&#x9;&#x9;  ,Source.[IDERP]&#xA;&#x9;&#x9;&#x9;  ,Source.[IDEQUALS]&#xA;&#x9;&#x9;&#x9;  ,Source.[Bandeira]&#xA;&#x9;&#x9;&#x9;  ,Source.[Adquirente]&#xA;&#x9;&#x9;&#x9;  ,Source.[LoteRO]&#xA;&#x9;&#x9;&#x9;  ,Source.[Data]&#xA;&#x9;&#x9;&#x9;  ,Source.[DtCaptura]&#xA;&#x9;&#x9;&#x9;  ,Source.[Hora]&#xA;&#x9;&#x9;&#x9;  ,Source.[NroCartao]&#xA;&#x9;&#x9;&#x9;  ,Source.[OrigemCartao]&#xA;&#x9;&#x9;&#x9;  ,Source.[NSU]&#xA;&#x9;&#x9;&#x9;  ,Source.[TID]&#xA;&#x9;&#x9;&#x9;  ,Source.[Parc]&#xA;&#x9;&#x9;&#x9;  ,Source.[LoteUnico]&#xA;&#x9;&#x9;&#x9;  ,Source.[NroReferencia]&#xA;&#x9;&#x9;&#x9;  ,Source.Taxa&#xA;&#x9;&#x9;&#x9;  ,Source.TaxaContrato&#xA;&#x9;&#x9;&#x9;  ,Source.[Situacao]&#xA;&#x9;&#x9;&#x9;  ,Source.[DtSituacao]&#xA;&#x9;&#x9;&#x9;  ,Source.[Conciliada]&#xA;&#x9;&#x9;&#x9;  ,Source.[MJustificativa]&#xA;&#x9;&#x9;&#x9;  ,Source.[NomeTarefa]&#xA;&#x9;&#x9;&#x9;  ,Source.[SituacaoTarefa]&#xA;&#x9;&#x9;&#x9;  ,Source.[ConciliacaoParam]&#xA;&#x9;&#x9;&#x9;  ,Source.[DtRegistro])&#xA;WHEN MATCHED THEN UPDATE &#xA; SET Target.Conciliada = Source.Conciliada,&#xA;  Target.DtSituacao = Source.DtSituacao,&#xA;  Target.IDERP = Source.IDERP, &#xA;  Target.Bandeira = Source.Bandeira,&#xA;  Target.Adquirente = Source.Adquirente,&#xA;  Target.MJustificativa  = Source.MJustificativa, &#xA;  Target.NomeTarefa = Source.NomeTarefa,&#xA;  Target.NroReferencia = Source.NroReferencia,&#xA;  Target.Situacao = Source.Situacao,&#xA;  Target.SituacaoTarefa = Source.SituacaoTarefa,&#xA;  Target.LoteUnico = Source.LoteUnico;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          SQLTask:SqlStatementSource="MERGE INTO dimTransacaoAdquirente AS Target&#xA;USING (&#xA;&#x9;&#xA;&#x9;SELECT distinct [NroAutorizacao]&#xA;&#x9;&#x9;&#x9;  ,MAX([IDERP]) as IDERP&#xA;&#x9;&#x9;&#x9;  ,MAX([IDEQUALS]) as IDEQUALS &#xA;&#x9;&#x9;&#x9;  ,[Bandeira]&#xA;&#x9;&#x9;&#x9;  ,[Adquirente]&#xA;&#x9;&#x9;&#x9;  ,[LoteRO]&#xA;&#x9;&#x9;&#x9;  ,[Data]&#xA;&#x9;&#x9;&#x9;  ,[DtCaptura]&#xA;&#x9;&#x9;&#x9;  ,[Hora]&#xA;&#x9;&#x9;&#x9;  ,[NroCartao]&#xA;&#x9;&#x9;&#x9;  ,[OrigemCartao]&#xA;&#x9;&#x9;&#x9;  ,[NSU]&#xA;&#x9;&#x9;&#x9;  ,[TID]&#xA;&#x9;&#x9;&#x9;  ,[Parc]&#xA;&#x9;&#x9;&#x9;  ,[LoteUnico]&#xA;&#x9;&#x9;&#x9;  ,[NroReferencia]&#xA;&#x9;&#x9;&#x9;  ,replace(replace([Taxa], '%', ''), ',', '.') as Taxa&#xA;&#x9;&#x9;&#x9;  ,replace(replace([TxContrato], '%', ''), ',', '.') as TaxaContrato&#xA;&#x9;&#x9;&#x9;  ,MAX(Situacao) as Situacao&#xA;&#x9;&#x9;&#x9;  ,MAX([DtSituacao]) as DtSituacao&#xA;&#x9;&#x9;&#x9;  ,MAX([Conciliada]) as Conciliada&#xA;&#x9;&#x9;&#x9;  ,[MJustificativa]&#xA;&#x9;&#x9;&#x9;  ,[NomeTarefa]&#xA;&#x9;&#x9;&#x9;  ,[SituacaoTarefa]&#xA;&#x9;&#x9;&#x9;  ,[ConciliacaoParam]&#xA;&#x9;&#x9;&#x9;  ,MAX([DtRegistro]) as DtRegistro&#xA;&#x9;FROM [dbo].[dsTransacaoAdquirente] &#xA;&#x9;group by [NroAutorizacao]&#xA;&#x9;&#x9;&#x9;  ,[Bandeira]&#xA;&#x9;&#x9;&#x9;  ,[Adquirente]&#xA;&#x9;&#x9;&#x9;  ,[LoteRO]&#xA;&#x9;&#x9;&#x9;  ,[Data]&#xA;&#x9;&#x9;&#x9;  ,[DtCaptura]&#xA;&#x9;&#x9;&#x9;  ,[Hora]&#xA;&#x9;&#x9;&#x9;  ,[NroCartao]&#xA;&#x9;&#x9;&#x9;  ,[OrigemCartao]&#xA;&#x9;&#x9;&#x9;  ,[NSU]&#xA;&#x9;&#x9;&#x9;  ,[TID]&#xA;&#x9;&#x9;&#x9;  ,[Parc]&#xA;&#x9;&#x9;&#x9;  ,[LoteUnico]&#xA;&#x9;&#x9;&#x9;  ,[NroReferencia]&#xA;&#x9;&#x9;&#x9;  ,Taxa&#xA;&#x9;&#x9;&#x9;  ,TxContrato&#xA;&#x9;&#x9;&#x9;  ,[MJustificativa]&#xA;&#x9;&#x9;&#x9;  ,[NomeTarefa]&#xA;&#x9;&#x9;&#x9;  ,[SituacaoTarefa]&#xA;&#x9;&#x9;&#x9;  ,[ConciliacaoParam]&#xA;&#xA;) AS Source (NroAutorizacao&#xA;&#x9;&#x9;&#x9;  ,[IDERP]&#xA;&#x9;&#x9;&#x9;  ,[IDEQUALS]&#xA;&#x9;&#x9;&#x9;  ,[Bandeira]&#xA;&#x9;&#x9;&#x9;  ,[Adquirente]&#xA;&#x9;&#x9;&#x9;  ,[LoteRO]&#xA;&#x9;&#x9;&#x9;  ,[Data]&#xA;&#x9;&#x9;&#x9;  ,[DtCaptura]&#xA;&#x9;&#x9;&#x9;  ,[Hora]&#xA;&#x9;&#x9;&#x9;  ,[NroCartao]&#xA;&#x9;&#x9;&#x9;  ,[OrigemCartao]&#xA;&#x9;&#x9;&#x9;  ,[NSU]&#xA;&#x9;&#x9;&#x9;  ,[TID]&#xA;&#x9;&#x9;&#x9;  ,[Parc]&#xA;&#x9;&#x9;&#x9;  ,[LoteUnico]&#xA;&#x9;&#x9;&#x9;  ,[NroReferencia]&#xA;&#x9;&#x9;&#x9;  ,Taxa&#xA;&#x9;&#x9;&#x9;  ,TaxaContrato&#xA;&#x9;&#x9;&#x9;  ,[Situacao]&#xA;&#x9;&#x9;&#x9;  ,[DtSituacao]&#xA;&#x9;&#x9;&#x9;  ,[Conciliada]&#xA;&#x9;&#x9;&#x9;  ,[MJustificativa]&#xA;&#x9;&#x9;&#x9;  ,[NomeTarefa]&#xA;&#x9;&#x9;&#x9;  ,[SituacaoTarefa]&#xA;&#x9;&#x9;&#x9;  ,[ConciliacaoParam]&#xA;&#x9;&#x9;&#x9;  ,[DtRegistro]&#xA;&#x9;&#x9;&#x9;)&#xA;--ON (Target.IDEQUALS  = Source.[IDEQUALS])&#xA;ON (isnull(Target.Adquirente, 0) = isnull(Source.Adquirente, 0)&#xA;&#x9;and isnull(Target.NSU, 0) = isnull(Source.NSU, 0)&#xA;&#x9;and isnull(Target.NroAutorizacao, 0) = isnull(Source.NroAutorizacao, 0)&#xA;&#x9;and isnull(Target.TID, 0) = isnull(Source.TID, 0)&#xA;&#x9;and isnull(Target.DtCaptura, 0) = isnull(Source.DtCaptura, 0)&#xA;&#x9;and isnull(Target.LoteUnico, 0) = isnull(Source.LoteUnico, 0)&#xA;&#x9;and isnull(Target.LoteUnico, 0) = isnull(Source.LoteUnico, 0))&#xA;&#xA;WHEN NOT MATCHED BY TARGET THEN&#xA; INSERT (NroAutorizacao&#xA;&#x9;&#x9;&#x9;  ,[IDERP]&#xA;&#x9;&#x9;&#x9;  ,[IDEQUALS]&#xA;&#x9;&#x9;&#x9;  ,[Bandeira]&#xA;&#x9;&#x9;&#x9;  ,[Adquirente]&#xA;&#x9;&#x9;&#x9;  ,[LoteRO]&#xA;&#x9;&#x9;&#x9;  ,[Data]&#xA;&#x9;&#x9;&#x9;  ,[DtCaptura]&#xA;&#x9;&#x9;&#x9;  ,[Hora]&#xA;&#x9;&#x9;&#x9;  ,[NroCartao]&#xA;&#x9;&#x9;&#x9;  ,[OrigemCartao]&#xA;&#x9;&#x9;&#x9;  ,[NSU]&#xA;&#x9;&#x9;&#x9;  ,[TID]&#xA;&#x9;&#x9;&#x9;  ,[Parc]&#xA;&#x9;&#x9;&#x9;  ,[LoteUnico]&#xA;&#x9;&#x9;&#x9;  ,[NroReferencia]&#xA;&#x9;&#x9;&#x9;  ,Taxa&#xA;&#x9;&#x9;&#x9;  ,TaxaContrato&#xA;&#x9;&#x9;&#x9;  ,[Situacao]&#xA;&#x9;&#x9;&#x9;  ,[DtSituacao]&#xA;&#x9;&#x9;&#x9;  ,[Conciliada]&#xA;&#x9;&#x9;&#x9;  ,[MJustificativa]&#xA;&#x9;&#x9;&#x9;  ,[NomeTarefa]&#xA;&#x9;&#x9;&#x9;  ,[SituacaoTarefa]&#xA;&#x9;&#x9;&#x9;  ,[ConciliacaoParam]&#xA;&#x9;&#x9;&#x9;  ,[DtRegistro])&#xA; VALUES (Source.NroAutorizacao &#xA;&#x9;&#x9;&#x9;  ,Source.[IDERP]&#xA;&#x9;&#x9;&#x9;  ,Source.[IDEQUALS]&#xA;&#x9;&#x9;&#x9;  ,Source.[Bandeira]&#xA;&#x9;&#x9;&#x9;  ,Source.[Adquirente]&#xA;&#x9;&#x9;&#x9;  ,Source.[LoteRO]&#xA;&#x9;&#x9;&#x9;  ,Source.[Data]&#xA;&#x9;&#x9;&#x9;  ,Source.[DtCaptura]&#xA;&#x9;&#x9;&#x9;  ,Source.[Hora]&#xA;&#x9;&#x9;&#x9;  ,Source.[NroCartao]&#xA;&#x9;&#x9;&#x9;  ,Source.[OrigemCartao]&#xA;&#x9;&#x9;&#x9;  ,Source.[NSU]&#xA;&#x9;&#x9;&#x9;  ,Source.[TID]&#xA;&#x9;&#x9;&#x9;  ,Source.[Parc]&#xA;&#x9;&#x9;&#x9;  ,Source.[LoteUnico]&#xA;&#x9;&#x9;&#x9;  ,Source.[NroReferencia]&#xA;&#x9;&#x9;&#x9;  ,Source.Taxa&#xA;&#x9;&#x9;&#x9;  ,Source.TaxaContrato&#xA;&#x9;&#x9;&#x9;  ,Source.[Situacao]&#xA;&#x9;&#x9;&#x9;  ,Source.[DtSituacao]&#xA;&#x9;&#x9;&#x9;  ,Source.[Conciliada]&#xA;&#x9;&#x9;&#x9;  ,Source.[MJustificativa]&#xA;&#x9;&#x9;&#x9;  ,Source.[NomeTarefa]&#xA;&#x9;&#x9;&#x9;  ,Source.[SituacaoTarefa]&#xA;&#x9;&#x9;&#x9;  ,Source.[ConciliacaoParam]&#xA;&#x9;&#x9;&#x9;  ,Source.[DtRegistro])&#xA;WHEN MATCHED THEN UPDATE &#xA; SET Target.Conciliada = Source.Conciliada,&#xA;  Target.DtSituacao = Source.DtSituacao,&#xA;  --Target.IDERP = Source.IDERP, &#xA;  --Target.Bandeira = Source.Bandeira,&#xA;  --Target.Adquirente = Source.Adquirente,&#xA;  Target.MJustificativa  = Source.MJustificativa, &#xA;  Target.NomeTarefa = Source.NomeTarefa,&#xA;  --Target.NroReferencia = Source.NroReferencia,&#xA;  Target.Situacao = Source.Situacao,&#xA;  Target.SituacaoTarefa = Source.SituacaoTarefa;&#xA;  --Target.LoteUnico = Source.LoteUnico;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
@@ -232,7 +232,7 @@
       DTS:LocaleID="-1"
       DTS:ObjectName="Load dimTransacaoIR"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2016; © 2015 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="0">
+      DTS:ThreadHint="1">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -249,7 +249,7 @@
       DTS:LocaleID="-1"
       DTS:ObjectName="Load dimTransacaoIRNaoConciliada"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2016; © 2015 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="0">
+      DTS:ThreadHint="1">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -266,7 +266,7 @@
       DTS:LocaleID="-1"
       DTS:ObjectName="Load dimVenda (Bileto)"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2016; © 2015 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="9">
+      DTS:ThreadHint="5">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -283,7 +283,7 @@
       DTS:LocaleID="-1"
       DTS:ObjectName="Load dimVenda (Legado)"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2016; © 2015 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="9">
+      DTS:ThreadHint="5">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -300,7 +300,7 @@
       DTS:LocaleID="-1"
       DTS:ObjectName="Load fatCancelamento"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2016; © 2015 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="0">
+      DTS:ThreadHint="1">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -317,12 +317,12 @@
       DTS:LocaleID="-1"
       DTS:ObjectName="Load fatConciliacaoLoteVenda"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2016; © 2015 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="1">
+      DTS:ThreadHint="0">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
           SQLTask:Connection="{D31E9785-7BAF-404F-A81A-B07A29CDECFA}"
-          SQLTask:SqlStatementSource="truncate table fatConciliacaoLoteVenda&#xA;&#xA;&#xA;insert into fatConciliacaoLoteVenda&#xA;(IdLoteVenda, IdDataVenda, ValorVenda, ValorCanceladoVenda, ValorVendaValido)&#xA;select a.IdLoteVenda as IdLoteVenda, &#xA;&#x9;&#x9;a.IdDataVenda as IdDataVenda, &#xA;&#x9;&#x9;sum(isnull(a.ValorVenda,0))as ValorVenda, &#xA;&#x9;&#x9;sum(isnull(a.ValorCanceladoVenda, 0)) as ValorCanceladoVenda, &#xA;&#x9;&#x9;sum(iif(b.IsCanceladaMesmoDia = 0, isnull(a.ValorVenda,0), 0)) as VendaValido&#xA;from fatConciliacaoVenda a&#xA;inner join dimVenda b on a.IdVenda = b.IdVenda&#xA;where a.IdLoteVenda not in (select IdLoteVenda from fatConciliacaoLoteVenda)&#xA;group by a.IdLoteVenda, a.IdDataVenda&#xA;order by IdLoteVenda, IdDataVenda&#xA;&#xA;--=====================================================&#xA;-- Setando os valores de fluxo de caixa do lote. &#xA;select&#x9;a.IdLoteVenda as IdLoteVenda, &#xA;&#x9;&#x9;a.IdDataLoteVenda as IdDataVenda,&#xA;&#x9;&#x9;isnull(a.IdDataVencimento, -1) as IdDataPagamento, &#xA;&#x9;&#x9;a.IdDomicilioBancario, &#xA;&#x9;&#x9;sum(a.ValorBruto) as ValorBruto, &#xA;&#x9;&#x9;sum(a.ValorCancelamentoLiquido) as ValorCanceladoLiquido, &#xA;&#x9;&#x9;sum(a.ValorCBKLiquido) as ValorCBKLiquido, &#xA;&#x9;&#x9;sum(a.ValorComissao) as ValorComissao, &#xA;&#x9;&#x9;sum(a.ValorAntecipacaoCedida) as VlrAntecipacaoCedida, &#xA;&#x9;&#x9;sum(a.ValorAntecipacao) as VlrAntecipacao, &#xA;&#x9;&#x9;sum(a.TaxaAntecipacao) as TaxaAntecipacao, &#xA;&#x9;&#x9;sum(a.ValorOutrosAjustes) as ValorOutrosAjustes, &#xA;&#x9;&#x9;sum(a.ValorPrevisto)as ValorPrevisto, &#xA;&#x9;&#x9;sum(a.ValorPago) as ValorPago&#xA;into #tmp_LoteVendaScoreCard&#xA;from fatFluxoCaixa a &#xA;group by a.IdLoteVenda, a.IdDataLoteVenda, a.IdDataVencimento, a.IdDomicilioBancario&#xA;&#xA;-- Atualiza os valores dos lotes. &#xA;update fatConciliacaoLoteVenda&#xA;set IdDataPagamento = b.IdDataPagamento, &#xA;IdDomicilioBancario = b.IdDomicilioBancario, &#xA;ValorBrutoAdquirente = b.ValorBruto, &#xA;ValorCanceladoLiquido = b.ValorCanceladoLiquido, &#xA;ValorCBKLiquido = b.ValorCBKLiquido, &#xA;ComissaoAdquirente = b.ValorComissao, &#xA;ValorAntecipacaoCedida = b.VlrAntecipacaoCedida, &#xA;ValorAntecipacao = b.VlrAntecipacao, &#xA;TaxaAntecipacao = b.TaxaAntecipacao, &#xA;ValorOutrosAjustes = b.ValorOutrosAjustes, &#xA;ValorPrevistoConciliador = b.ValorPrevisto, &#xA;ValorPago = b.ValorPago&#xA;from fatConciliacaoLoteVenda a &#xA;inner join #tmp_LoteVendaScoreCard b on a.IdLoteVenda = b.IdLoteVenda&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;and a.IdDataVenda = b.IdDataVenda&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;and a.IdDataPagamento = b.IdDataPagamento&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;and a.IdDomicilioBancario = b.IdDomicilioBancario&#xA;&#xA;-- Setando os valores de fluxo de caixa que só geram movimento bancário. &#xA;insert into fatConciliacaoLoteVenda&#xA;(IdLoteVenda, IdDataVenda, IdDataPagamento, ValorBrutoAdquirente,  &#xA; IdDomicilioBancario, ValorCanceladoLiquido, ValorCBKLiquido, &#xA; ComissaoAdquirente, ValorAntecipacaoCedida, ValorAntecipacao, &#xA; TaxaAntecipacao, ValorOutrosAjustes, ValorPrevistoConciliador, &#xA; ValorPago)&#xA;select a.IdLoteVenda, &#xA;&#x9;a.IdDataVenda, &#xA;&#x9;a.IdDataPagamento, &#xA;&#x9;a.ValorBruto, &#xA;&#x9;a.IdDomicilioBancario, &#xA;&#x9;a.ValorCanceladoLiquido, &#xA;&#x9;a.ValorCBKLiquido, &#xA;&#x9;a.ValorComissao, &#xA;&#x9;a.VlrAntecipacaoCedida,&#xA;&#x9;a.VlrAntecipacao, &#xA;&#x9;a.TaxaAntecipacao, &#xA;&#x9;a.ValorOutrosAjustes, &#xA;&#x9;a.ValorPrevisto, &#xA;&#x9;a.ValorPago&#xA;from #tmp_LoteVendaScoreCard a&#xA;left join fatConciliacaoLoteVenda b on a.IdLoteVenda = b.IdLoteVenda&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;and a.IdDataVenda = b.IdDataVenda&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;and a.IdDataPagamento = b.IdDataPagamento&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;and a.IdDomicilioBancario = b.IdDomicilioBancario&#xA;where b.IdLoteVenda is null&#xA;&#xA;drop table #tmp_LoteVendaScoreCard&#xA;&#xA;&#xA;-- Seta na dimLoteVenda os lotes já quitados. &#xA;select&#x9;IdLoteVenda, &#xA;&#x9;&#x9;sum(ValorVenda) as TotalVenda,&#xA;&#x9;&#x9;sum(ValorBrutoAdquirente) as Transacionado,  &#xA;&#x9;&#x9;sum(ValorPrevistoConciliador) as ValorPrevisto,&#xA;&#x9;&#x9;sum(ValorPago) as ValorPago, &#xA;&#x9;&#x9;sum(ValorPago) - sum(ValorPrevistoConciliador) as Saldo&#xA;into #tmpLote&#xA;from fatConciliacaoLoteVenda&#xA;group by IdLoteVenda&#xA;&#xA;update dimLoteVenda&#xA;set Quitado = 'Sim'&#xA;from dimLoteVenda a &#xA;inner join #tmpLote b on a.IdLoteVenda = b.IdLoteVenda &#xA;where Saldo = 0&#xA;&#xA;drop table #tmpLote&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          SQLTask:SqlStatementSource="truncate table fatConciliacaoLoteVenda&#xA;&#xA;&#xA;insert into fatConciliacaoLoteVenda&#xA;(IdLoteVenda, IdDataVenda, ValorVenda, ValorCanceladoVenda, ValorVendaValido)&#xA;select a.IdLoteVenda as IdLoteVenda, &#xA;&#x9;&#x9;a.IdDataVenda as IdDataVenda, &#xA;&#x9;&#x9;sum(isnull(a.ValorVenda,0))as ValorVenda, &#xA;&#x9;&#x9;sum(isnull(a.ValorCanceladoVenda, 0)) as ValorCanceladoVenda, &#xA;&#x9;&#x9;sum(iif(b.IsCanceladaMesmoDia = 0, isnull(a.ValorVenda,0), 0)) as VendaValido&#xA;from fatConciliacaoVenda a&#xA;inner join dimVenda b on a.IdVenda = b.IdVenda&#xA;where a.IdLoteVenda not in (select IdLoteVenda from fatConciliacaoLoteVenda)&#xA;group by a.IdLoteVenda, a.IdDataVenda&#xA;order by IdLoteVenda, IdDataVenda&#xA;&#xA;--=====================================================&#xA;-- Setando os valores de fluxo de caixa do lote. &#xA;select&#x9;a.IdLoteVenda as IdLoteVenda, &#xA;&#x9;&#x9;a.IdDataLoteVenda as IdDataVenda,&#xA;&#x9;&#x9;isnull(a.IdDataVencimento, -1) as IdDataPagamento, &#xA;&#x9;&#x9;a.IdDomicilioBancario, &#xA;&#x9;&#x9;sum(a.ValorBruto) as ValorBruto, &#xA;&#x9;&#x9;sum(a.ValorCancelamentoLiquido) as ValorCanceladoLiquido, &#xA;&#x9;&#x9;sum(a.ValorCBKLiquido) as ValorCBKLiquido, &#xA;&#x9;&#x9;sum(a.ValorComissao) as ValorComissao, &#xA;&#x9;&#x9;sum(a.ValorAntecipacaoCedida) as VlrAntecipacaoCedida, &#xA;&#x9;&#x9;sum(a.ValorAntecipacao) as VlrAntecipacao, &#xA;&#x9;&#x9;sum(a.TaxaAntecipacao) as TaxaAntecipacao, &#xA;&#x9;&#x9;sum(a.ValorOutrosAjustes) as ValorOutrosAjustes, &#xA;&#x9;&#x9;sum(a.ValorPrevisto)as ValorPrevisto, &#xA;&#x9;&#x9;sum(a.ValorPago) as ValorPago&#xA;into #tmp_2&#xA;from fatFluxoCaixa a &#xA;group by a.IdLoteVenda, a.IdDataLoteVenda, a.IdDataVencimento, a.IdDomicilioBancario&#xA;&#xA;select IdLoteVenda, min(IdDataVenda) as IdDataVenda&#xA;into #tmp&#xA;from #tmp_2 where IdLoteVenda in (&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;select distinct IdLoteVenda &#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;from #tmp_2&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;where IdDataVenda = -1)&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;and IdDataVenda &lt;&gt; -1&#xA;group by IdLoteVenda &#xA;&#xA;update #tmp_2&#xA;set IdDataVenda = b.IdDataVenda&#xA;from #tmp_2 a &#xA;inner join #tmp b on a.IdLoteVenda = b.IdLoteVenda&#xA;and a.IdDataVenda = -1&#xA;&#xA;drop table #tmp&#xA;&#xA;select IdLoteVenda, &#xA;&#x9;&#x9;IdDataVenda,&#xA;&#x9;&#x9;IdDataPagamento, &#xA;&#x9;&#x9;IdDomicilioBancario, &#xA;&#x9;&#x9;sum(ValorBruto) as ValorBruto, &#xA;&#x9;&#x9;sum(ValorCanceladoLiquido) as ValorCanceladoLiquido, &#xA;&#x9;&#x9;sum(ValorCBKLiquido) as ValorCBKLiquido, &#xA;&#x9;&#x9;sum(ValorComissao) as ValorComissao, &#xA;&#x9;&#x9;sum(VlrAntecipacaoCedida) as VlrAntecipacaoCedida, &#xA;&#x9;&#x9;sum(VlrAntecipacao) as VlrAntecipacao, &#xA;&#x9;&#x9;sum(TaxaAntecipacao) as TaxaAntecipacao, &#xA;&#x9;&#x9;sum(ValorOutrosAjustes) as ValorOutrosAjustes, &#xA;&#x9;&#x9;sum(ValorPrevisto)as ValorPrevisto, &#xA;&#x9;&#x9;sum(ValorPago) as ValorPago&#xA;into #tmp_LoteVendaScoreCard&#xA;from #tmp_2&#xA;group by IdLoteVenda, &#xA;&#x9;&#x9;IdDataVenda,&#xA;&#x9;&#x9;IdDataPagamento, &#xA;&#x9;&#x9;IdDomicilioBancario&#xA;&#xA;drop table #tmp_2&#xA;&#xA;&#xA;-- Atualiza os valores dos lotes. &#xA;update fatConciliacaoLoteVenda&#xA;set IdDataPagamento = b.IdDataPagamento, &#xA;IdDomicilioBancario = b.IdDomicilioBancario, &#xA;ValorBrutoAdquirente = b.ValorBruto, &#xA;ValorCanceladoLiquido = b.ValorCanceladoLiquido, &#xA;ValorCBKLiquido = b.ValorCBKLiquido, &#xA;ComissaoAdquirente = b.ValorComissao, &#xA;ValorAntecipacaoCedida = b.VlrAntecipacaoCedida, &#xA;ValorAntecipacao = b.VlrAntecipacao, &#xA;TaxaAntecipacao = b.TaxaAntecipacao, &#xA;ValorOutrosAjustes = b.ValorOutrosAjustes, &#xA;ValorPrevistoConciliador = b.ValorPrevisto, &#xA;ValorPago = b.ValorPago&#xA;from fatConciliacaoLoteVenda a &#xA;inner join #tmp_LoteVendaScoreCard b on a.IdLoteVenda = b.IdLoteVenda&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;and a.IdDataVenda = b.IdDataVenda&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;and a.IdDataPagamento = b.IdDataPagamento&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;and a.IdDomicilioBancario = b.IdDomicilioBancario&#xA;&#xA;-- Setando os valores de fluxo de caixa que só geram movimento bancário. &#xA;insert into fatConciliacaoLoteVenda&#xA;(IdLoteVenda, IdDataVenda, IdDataPagamento, ValorBrutoAdquirente,  &#xA; IdDomicilioBancario, ValorCanceladoLiquido, ValorCBKLiquido, &#xA; ComissaoAdquirente, ValorAntecipacaoCedida, ValorAntecipacao, &#xA; TaxaAntecipacao, ValorOutrosAjustes, ValorPrevistoConciliador, &#xA; ValorPago)&#xA;select a.IdLoteVenda, &#xA;&#x9;a.IdDataVenda, &#xA;&#x9;a.IdDataPagamento, &#xA;&#x9;a.ValorBruto, &#xA;&#x9;a.IdDomicilioBancario, &#xA;&#x9;a.ValorCanceladoLiquido, &#xA;&#x9;a.ValorCBKLiquido, &#xA;&#x9;a.ValorComissao, &#xA;&#x9;a.VlrAntecipacaoCedida,&#xA;&#x9;a.VlrAntecipacao, &#xA;&#x9;a.TaxaAntecipacao, &#xA;&#x9;a.ValorOutrosAjustes, &#xA;&#x9;a.ValorPrevisto, &#xA;&#x9;a.ValorPago&#xA;from #tmp_LoteVendaScoreCard a&#xA;left join fatConciliacaoLoteVenda b on a.IdLoteVenda = b.IdLoteVenda&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;and a.IdDataVenda = b.IdDataVenda&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;and a.IdDataPagamento = b.IdDataPagamento&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;and a.IdDomicilioBancario = b.IdDomicilioBancario&#xA;where b.IdLoteVenda is null&#xA;&#xA;&#xA;drop table #tmp_LoteVendaScoreCard&#xA;&#xA;&#xA;-- Seta na dimLoteVenda os lotes já quitados. &#xA;select&#x9;IdLoteVenda, &#xA;&#x9;&#x9;sum(ValorVenda) as TotalVenda,&#xA;&#x9;&#x9;sum(ValorBrutoAdquirente) as Transacionado,  &#xA;&#x9;&#x9;sum(ValorPrevistoConciliador) as ValorPrevisto,&#xA;&#x9;&#x9;sum(ValorPago) as ValorPago, &#xA;&#x9;&#x9;sum(ValorPago) - sum(ValorPrevistoConciliador) as Saldo&#xA;into #tmpLote&#xA;from fatConciliacaoLoteVenda&#xA;group by IdLoteVenda&#xA;&#xA;&#xA;&#xA;update dimLoteVenda&#xA;set Quitado = 'Sim'&#xA;from dimLoteVenda a &#xA;inner join #tmpLote b on a.IdLoteVenda = b.IdLoteVenda &#xA;where Saldo = 0&#xA;&#xA;drop table #tmpLote&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
@@ -334,7 +334,7 @@
       DTS:LocaleID="-1"
       DTS:ObjectName="Load fatConciliacaoVenda"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2016; © 2015 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="1">
+      DTS:ThreadHint="0">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -351,12 +351,12 @@
       DTS:LocaleID="-1"
       DTS:ObjectName="Load fatFluxoCaixa"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2016; © 2015 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="4">
+      DTS:ThreadHint="0">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
           SQLTask:Connection="{D31E9785-7BAF-404F-A81A-B07A29CDECFA}"
-          SQLTask:SqlStatementSource="-- separa as linhas distintas.&#xA;SELECT distinct [DataVencimento]&#xA;      ,[Estabelecimento]&#xA;      ,[CategoriaEstabelecimento]&#xA;      ,[DataLoteVenda]&#xA;      ,[MesAno]&#xA;      ,[Adquirente]&#xA;      ,[FiliacaoEstabelec]&#xA;      ,[Bandeira]&#xA;      ,[TipoVenda]&#xA;      ,[Produto]&#xA;      ,[Lote]&#xA;      ,[LoteUnico]&#xA;      ,[Parcela]&#xA;      ,[QtdeParcelas]&#xA;      ,[Banco]&#xA;      ,[Agencia]&#xA;      ,[Conta]&#xA;      ,[ValorBruto]&#xA;      ,[ValorComissao]&#xA;      ,[VendasAntecCedidas]&#xA;      ,[Cancelamentos]&#xA;      ,[Chargeback]&#xA;      ,[OutrosAjustes]&#xA;      ,[ValorAntecipacoes]&#xA;      ,[DescontosAntecCessoes]&#xA;      ,[ValorPrevisto]&#xA;      ,[ValorPago]&#xA;      ,[Saldo]&#xA;      ,[VendasCedidas]&#xA;      ,[CessoesAvulsas]&#xA;      ,[DescontosCessoesAvulsas]&#xA;&#x9;into #tmp&#xA;  FROM [dbo].[dsFluxoCaixa]&#xA;GO&#xA;&#xA;-- Load para a fato&#xA;INSERT INTO [dbo].[fatFluxoCaixa]&#xA;           ([IdLoteVenda]&#xA;           ,[IdDomicilioBancario]&#xA;           ,[IdProduto]&#xA;           ,[LoteUnico]&#xA;           ,[IdDataLoteVenda]&#xA;           ,[IdDataVencimento]&#xA;           ,[Parcela]&#xA;           ,[QtdeParcelas]&#xA;           ,[ValorBruto]&#xA;           ,[ValorComissao]&#xA;           ,[ValorAntecipacaoCedida]&#xA;           ,[ValorCancelamentoLiquido]&#xA;           ,[ValorCBKLiquido]&#xA;           ,[ValorOutrosAjustes]&#xA;           ,[ValorAntecipacao]&#xA;           ,[TaxaAntecipacao]&#xA;           ,[ValorPrevisto]&#xA;           ,[ValorPago]&#xA;           ,[Saldo])&#xA;select distinct b.IdLoteVenda, &#xA;&#x9;&#x9;isnull(c.IdDomicilioBancario, -1) as IdDomicilioBancario, &#xA;&#x9;&#x9;isnull(d.IdProduto, -1) as IdProduto, &#xA;&#x9;&#x9;isnull(a.LoteUnico, '-1') as LoteUnico, &#xA;&#x9;&#x9;isnull(e.IdTempo, -1) as IdDataLoteVenda, &#xA;&#x9;&#x9;isnull(f.IdTempo, -1) as IdDataVencimento, &#xA;&#x9;&#x9;isnull(a.Parcela, 0) as Parcela, &#xA;&#x9;&#x9;isnull(a.QtdeParcelas, 0) as QtdeParcelas, &#xA;&#x9;&#x9;isnull(a.ValorBruto, 0) as ValorBruto, &#xA;&#x9;&#x9;isnull(a.ValorComissao, 0) as ValorComissao, &#xA;&#x9;&#x9;isnull(a.VendasAntecCedidas, 0) as ValorAntecipacaoCedida, &#xA;&#x9;&#x9;isnull(a.Cancelamentos, 0) as ValorCancelamentoLiquido, &#xA;&#x9;&#x9;isnull(a.Chargeback, 0) as ValorCahrgebackLiquido, &#xA;&#x9;&#x9;isnull(a.OutrosAjustes, 0) as ValorOutrosAjustes, &#xA;&#x9;&#x9;isnull(a.ValorAntecipacoes, 0) as ValorAntecipacao, &#xA;&#x9;&#x9;isnull(a.DescontosAntecCessoes, 0) as TaxaAntecipacao, &#xA;&#x9;&#x9;isnull(a.ValorPrevisto, 0) as ValorPrevisto, &#xA;&#x9;&#x9;isnull(a.ValorPago, 0) as ValorPago, &#xA;&#x9;&#x9;isnull(a.Saldo, 0) as Saldo &#xA;from #tmp a&#xA;left join dimLoteVenda b on --isnull(a.Lote, '-1') = b.Lote&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;--and &#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;isnull(a.LoteUnico, '-1') = b.LoteUnico&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;--and isnull(a.FiliacaoEstabelec, '-1') = b.FiliacaoEstabelecimento&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;and a.Adquirente = b.Adquirente&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;--and a.Estabelecimento = b.Estabelecimento&#xA;left join dimDomicilioBancario c on isnull(a.Banco, 0) = c.Banco&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;and isnull(a.Agencia, 0) = c.Agencia&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;and isnull(a.Conta, 0) = c.Conta&#xA;left join dimProduto d on a.TipoVenda = d.Tipo&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;and a.Produto = d.Produto&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;and a.Bandeira = d.Bandeira&#xA;left join dimTempo e on a.DataLoteVenda = e.DATA&#xA;left join dimTempo f on a.DataVencimento = f.DATA&#xA;left join fatFluxoCaixa g on isnull(a.LoteUnico, -1) = g.LoteUnico&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;--and isnull(a.Lote, '-1') = b.Lote&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;and isnull(a.Parcela, 0) = g.Parcela&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;and isnull(a.ValorBruto, 0) = g.ValorBruto&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;and isnull(a.VendasAntecCedidas, 0) = g.ValorAntecipacaoCedida&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;and isnull(a.ValorPago, 0) = g.ValorPago&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;and isnull(a.ValorPrevisto, 0) = g.ValorPrevisto&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;and isnull(a.[Cancelamentos], 0) = g.ValorCancelamentoLiquido&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;and isnull(e.IdTempo, -1) = g.IdDataLoteVenda&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;and isnull(f.IdTempo, -1) = g.IdDataVencimento&#xA;where g.IdLoteVenda is null -- Somente registros novos&#xA;&#xA;drop table #tmp" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          SQLTask:SqlStatementSource="-- separa as linhas distintas.&#xA;SELECT distinct [DataVencimento]&#xA;      ,[Estabelecimento]&#xA;      ,[CategoriaEstabelecimento]&#xA;      ,[DataLoteVenda]&#xA;      ,[MesAno]&#xA;      ,[Adquirente]&#xA;      ,[FiliacaoEstabelec]&#xA;      ,[Bandeira]&#xA;      ,[TipoVenda]&#xA;      ,[Produto]&#xA;      ,[Lote]&#xA;      ,[LoteUnico]&#xA;      ,[Parcela]&#xA;      ,[QtdeParcelas]&#xA;      ,[Banco]&#xA;      ,[Agencia]&#xA;      ,[Conta]&#xA;      ,[ValorBruto]&#xA;      ,[ValorComissao]&#xA;      ,[VendasAntecCedidas]&#xA;      ,[Cancelamentos]&#xA;      ,[Chargeback]&#xA;      ,[OutrosAjustes]&#xA;      ,[ValorAntecipacoes]&#xA;      ,[DescontosAntecCessoes]&#xA;      ,[ValorPrevisto]&#xA;      ,[ValorPago]&#xA;      ,[Saldo]&#xA;      ,[VendasCedidas]&#xA;      ,[CessoesAvulsas]&#xA;      ,[DescontosCessoesAvulsas]&#xA;&#x9;into #tmp&#xA;  FROM [dbo].[dsFluxoCaixa]&#xA;GO&#xA;&#xA;-- Load para a fato&#xA;INSERT INTO [dbo].[fatFluxoCaixa]&#xA;           ([IdLoteVenda]&#xA;           ,[IdDomicilioBancario]&#xA;           ,[IdProduto]&#xA;           ,[LoteUnico]&#xA;           ,[IdDataLoteVenda]&#xA;           ,[IdDataVencimento]&#xA;           ,[Parcela]&#xA;           ,[QtdeParcelas]&#xA;           ,[ValorBruto]&#xA;           ,[ValorComissao]&#xA;           ,[ValorAntecipacaoCedida]&#xA;           ,[ValorCancelamentoLiquido]&#xA;           ,[ValorCBKLiquido]&#xA;           ,[ValorOutrosAjustes]&#xA;           ,[ValorAntecipacao]&#xA;           ,[TaxaAntecipacao]&#xA;           ,[ValorPrevisto]&#xA;           ,[ValorPago]&#xA;           ,[Saldo])&#xA;select distinct b.IdLoteVenda, &#xA;&#x9;&#x9;isnull(c.IdDomicilioBancario, -1) as IdDomicilioBancario, &#xA;&#x9;&#x9;isnull(d.IdProduto, -1) as IdProduto, &#xA;&#x9;&#x9;isnull(a.LoteUnico, '-1') as LoteUnico, &#xA;&#x9;&#x9;isnull(e.IdTempo, -1) as IdDataLoteVenda, &#xA;&#x9;&#x9;isnull(f.IdTempo, -1) as IdDataVencimento, &#xA;&#x9;&#x9;isnull(a.Parcela, 0) as Parcela, &#xA;&#x9;&#x9;isnull(a.QtdeParcelas, 0) as QtdeParcelas, &#xA;&#x9;&#x9;isnull(a.ValorBruto, 0) as ValorBruto, &#xA;&#x9;&#x9;isnull(a.ValorComissao, 0) as ValorComissao, &#xA;&#x9;&#x9;isnull(a.VendasAntecCedidas, 0) as ValorAntecipacaoCedida, &#xA;&#x9;&#x9;isnull(a.Cancelamentos, 0) as ValorCancelamentoLiquido, &#xA;&#x9;&#x9;isnull(a.Chargeback, 0) as ValorCahrgebackLiquido, &#xA;&#x9;&#x9;isnull(a.OutrosAjustes, 0) as ValorOutrosAjustes, &#xA;&#x9;&#x9;isnull(a.ValorAntecipacoes, 0) as ValorAntecipacao, &#xA;&#x9;&#x9;isnull(a.DescontosAntecCessoes, 0) as TaxaAntecipacao, &#xA;&#x9;&#x9;isnull(a.ValorPrevisto, 0) as ValorPrevisto, &#xA;&#x9;&#x9;isnull(a.ValorPago, 0) as ValorPago, &#xA;&#x9;&#x9;isnull(a.Saldo, 0) as Saldo &#xA;from #tmp a&#xA;left join dimLoteVenda b on --isnull(a.Lote, '-1') = b.Lote&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;--and &#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;isnull(a.LoteUnico, '-1') = b.LoteUnico&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;--and isnull(a.FiliacaoEstabelec, '-1') = b.FiliacaoEstabelecimento&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;and a.Adquirente = b.Adquirente&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;--and a.Estabelecimento = b.Estabelecimento&#xA;left join dimDomicilioBancario c on isnull(a.Banco, 0) = c.Banco&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;and isnull(a.Agencia, 0) = c.Agencia&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;and isnull(a.Conta, 0) = c.Conta&#xA;left join dimProduto d on a.TipoVenda = d.Tipo&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;and a.Produto = d.Produto&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;and a.Bandeira = d.Bandeira&#xA;left join dimTempo e on a.DataLoteVenda = e.DATA&#xA;left join dimTempo f on a.DataVencimento = f.DATA&#xA;left join fatFluxoCaixa g on isnull(a.LoteUnico, -1) = g.LoteUnico&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;--and isnull(a.Lote, '-1') = b.Lote -- Deprecated&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;and isnull(a.Parcela, 0) = g.Parcela&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;and isnull(a.ValorBruto, 0) = g.ValorBruto&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;and isnull(a.VendasAntecCedidas, 0) = g.ValorAntecipacaoCedida&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;and isnull(a.ValorPago, 0) = g.ValorPago&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;and isnull(a.ValorPrevisto, 0) = g.ValorPrevisto&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;and isnull(a.[Cancelamentos], 0) = g.ValorCancelamentoLiquido&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;and isnull(e.IdTempo, -1) = g.IdDataLoteVenda&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;and isnull(f.IdTempo, -1) = g.IdDataVencimento&#xA;where g.IdLoteVenda is null -- Somente registros novos&#xA;&#xA;drop table #tmp" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
@@ -367,7 +367,7 @@
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="Load fatPagamentoRecebivel"
-      DTS:ThreadHint="1">
+      DTS:ThreadHint="0">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -384,7 +384,7 @@
       DTS:LocaleID="-1"
       DTS:ObjectName="Load fatTransacaoAdquirente"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2016; © 2015 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="0">
+      DTS:ThreadHint="1">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -401,7 +401,7 @@
       DTS:LocaleID="-1"
       DTS:ObjectName="Load fatTransacaoIR"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2016; © 2015 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="0">
+      DTS:ThreadHint="1">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -418,7 +418,7 @@
       DTS:LocaleID="-1"
       DTS:ObjectName="Set Cancelamento Venda"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2016; © 2015 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="1">
+      DTS:ThreadHint="0">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -435,7 +435,7 @@
       DTS:LocaleID="-1"
       DTS:ObjectName="Set Lote into fatTransacaoAdquirente"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2016; © 2015 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="1">
+      DTS:ThreadHint="0">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -452,7 +452,7 @@
       DTS:LocaleID="-1"
       DTS:ObjectName="set Situacao"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2016; © 2015 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="0">
+      DTS:ThreadHint="1">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -469,7 +469,7 @@
       DTS:LocaleID="-1"
       DTS:ObjectName="Set StatusCancelamento"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2016; © 2015 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="0">
+      DTS:ThreadHint="1">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -486,12 +486,28 @@
       DTS:LocaleID="-1"
       DTS:ObjectName="Set TransacaoIR fatTransacao"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2016; © 2015 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="0">
+      DTS:ThreadHint="1">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
           SQLTask:Connection="{D31E9785-7BAF-404F-A81A-B07A29CDECFA}"
           SQLTask:SqlStatementSource="-- Somente se tiver registro a ser atualizado&#xA;--declare @count as int&#xA;--select @Count = count(*) from dsTransacaoIR&#xA;&#xA;--if(@count &gt; 0) &#xA;--begin&#xA;&#xA;&#x9;-- Join via Autorizacao, NSU e (Data or LoteRO/LoteAdq)&#xA;&#x9;update fatTransacaoAdquirente&#xA;&#x9;set IdTransacaoIR = b.IdTransacaoIR, &#xA;&#x9;ValorBrutoIR = b.ValorPagamento&#xA;&#x9;from fatTransacaoAdquirente c &#xA;&#x9;inner join dimTransacaoAdquirente a on c.IdTransacaoAdquirente = a.IdTransacaoAdquirente&#xA;&#x9;inner join dimTransacaoIR b on a.NroAutorizacao = b.NroAutorizacao&#xA;&#x9;&#x9;&#x9;and a.NSU = b.NSU&#xA;&#x9;&#x9;&#x9;and (a.DtCaptura = b.DtTransacao)&#xA;&#xA;&#x9;-- Join via TID, NSU e Autorizacao&#xA;&#x9;update fatTransacaoAdquirente &#xA;&#x9;set IdTransacaoIR = b.IdTransacaoIR, &#xA;&#x9;ValorBrutoIR = b.ValorPagamento&#xA;&#x9;from fatTransacaoAdquirente c &#xA;&#x9;inner join dimTransacaoAdquirente a on c.IdTransacaoAdquirente = a.IdTransacaoAdquirente&#xA;&#x9;inner join dimTransacaoIR b on a.NroAutorizacao = b.NroAutorizacao&#xA;&#x9;&#x9;&#x9;and a.NSU = b.NSU&#xA;&#x9;&#x9;&#x9;and a.TID = b.TID&#xA;&#x9;where c.IdTransacaoIR = -1 and b.TID is not null&#xA;&#xA;&#x9;-- Join via NSU, Autorizacao e Lote&#xA;&#x9;update fatTransacaoAdquirente &#xA;&#x9;set IdTransacaoIR = b.IdTransacaoIR, &#xA;&#x9;ValorBrutoIR = b.ValorPagamento&#xA;&#x9;from fatTransacaoAdquirente c &#xA;&#x9;inner join dimTransacaoAdquirente a on c.IdTransacaoAdquirente = a.IdTransacaoAdquirente&#xA;&#x9;inner join dimTransacaoIR b on a.NroAutorizacao = b.NroAutorizacao&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;and a.NSU = b.NSU&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;and a.LoteRO = b.LoteAdq&#xA;&#x9;where c.IdTransacaoIR = -1 and b.LoteAdq is not null&#xA;&#xA;&#xA;&#x9;-- join via Bandeira, Autorizacao, Valor, Lote e dif. datas menor que 5 dias. &#xA;&#x9;-- Seleciona via Bandeira, Autorizacao, Valor, Lote e dif. datas menor que 5 dias. &#xA;&#x9;select distinct b.IdTransacaoIR, b.ValorPagamento, c.IdTransacaoAdquirente&#xA;&#x9;into #tmpFat&#xA;&#x9;from fatTransacaoAdquirente c &#xA;&#x9;inner join dimTransacaoAdquirente a on c.IdTransacaoAdquirente = a.IdTransacaoAdquirente&#xA;&#x9;inner join dimTransacaoIR b on a.Bandeira = b.Bandeira&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;and a.NroAutorizacao = b.NroAutorizacao&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;and c.ValorBrutoAdquirente = b.ValorPagamento&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;and  a.LoteRO = b.LoteAdq&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;and DATEDIFF(d, a.DtCaptura, b.DtTransacao) between -5 and 5 -- Limite de diferença de 5 dias. &#xA;&#x9;where c.IdTransacaoIR = -1 and b.Bandeira is not null and b.NroAutorizacao is not null &#xA;&#xA;&#x9;-- Deleta as transações que concidiram com alguma conciliada já.&#xA;&#x9;delete from #tmpFat where IdTransacaoIR in (&#xA;&#x9;&#x9;&#x9;select a.IdTransacaoIR from #tmpFat a&#xA;&#x9;&#x9;&#x9;inner join fatTransacaoAdquirente b on a.IdTransacaoIR = b.IdTransacaoIR&#xA;&#x9;&#x9;&#x9;)&#xA;&#x9;-- Correção manual. &#xA;&#x9;delete from #tmpFat where IdTransacaoAdquirente = 366636&#xA;&#xA;&#x9;-- Concilia &#xA;&#x9;update fatTransacaoAdquirente&#xA;&#x9;set IdTransacaoIR = b.IdTransacaoIR, &#xA;&#x9;ValorBrutoIR = b.ValorPagamento&#xA;&#x9;from fatTransacaoAdquirente a&#xA;&#x9;inner join #tmpFat b on a.IdTransacaoAdquirente = b.IdTransacaoAdquirente&#xA;&#x9;where a.IdTransacaoIR = -1 &#xA;&#xA;&#x9;drop table #tmpFat&#xA;&#xA;&#x9;-- Concilia via manipulacao do NroAutorizacao transações ainda em aberto. &#xA;&#x9;update fatTransacaoAdquirente&#xA;&#x9;set IdTransacaoIR = b.IdTransacaoIR, &#xA;&#x9;ValorBrutoIR = b.ValorPagamento&#xA;&#x9;from fatTransacaoAdquirente c &#xA;&#x9;inner join dimTransacaoAdquirente a on c.IdTransacaoAdquirente = a.IdTransacaoAdquirente&#xA;&#x9;inner join dimAdquirente f on c.IdAdquirente = f.IdAdquirente&#xA;&#x9;inner join dimTransacaoIR b on a.LoteRO = b.LoteAdq&#xA;&#x9;&#x9;&#x9;and a.NSU = b.NSU&#xA;&#x9;&#x9;&#x9;and (a.DtCaptura = b.DtTransacao)&#xA;&#x9;&#x9;&#x9;and c.ValorBrutoAdquirente = b.ValorPagamento&#xA;&#x9;&#x9;&#x9;and REPLACE(a.NroAutorizacao, '00', '') = REPLACE(b.NroAutorizacao, '00', '')&#xA;&#x9;where c.IdTransacaoIR = -1&#xA;&#xA;&#x9;-- join via Bandeira, NSU, Valor, Lote, Estabelecimento e dif. datas (data = dtTransacao) menor que 5 dias. &#xA;&#x9;update fatTransacaoAdquirente&#xA;&#x9;set IdTransacaoIR = b.IdTransacaoIR, &#xA;&#x9;ValorBrutoIR = b.ValorPagamento&#xA;&#x9;from fatTransacaoAdquirente c &#xA;&#x9;inner join dimTransacaoAdquirente a on c.IdTransacaoAdquirente = a.IdTransacaoAdquirente&#xA;&#x9;inner join dimAdquirente d on c.IdAdquirente = d.IdAdquirente&#xA;&#x9;inner join dimTransacaoIR b on a.Bandeira = b.Bandeira&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;and a.NSU = b.NSU&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;and c.ValorBrutoAdquirente = b.ValorPagamento&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;and  a.LoteRO = b.LoteAdq&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;and DATEDIFF(d, a.Data, b.DtTransacao) between -5 and 5 -- Limite de diferença de 5 dias. &#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;and d.Estabelecimento = b.Estabelecimento&#xA;&#x9;where c.IdTransacaoIR = -1 and b.Bandeira is not null and b.NSU is not null &#xA;&#xA;&#x9;-- join via NSU, Valor, Lote, Estabelecimento e dif. datas (data = dtTransacao) menor que 5 dias. &#xA;&#x9;update fatTransacaoAdquirente&#xA;&#x9;set IdTransacaoIR = b.IdTransacaoIR, &#xA;&#x9;ValorBrutoIR = b.ValorPagamento&#xA;&#x9;from fatTransacaoAdquirente c &#xA;&#x9;inner join dimTransacaoAdquirente a on c.IdTransacaoAdquirente = a.IdTransacaoAdquirente&#xA;&#x9;inner join dimAdquirente d on c.IdAdquirente = d.IdAdquirente&#xA;&#x9;inner join dimTransacaoIR b on a.NSU = b.NSU&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;and c.ValorBrutoAdquirente = b.ValorPagamento&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;and  a.LoteRO = b.LoteAdq&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;and DATEDIFF(d, a.Data, b.DtTransacao) between -5 and 5 -- Limite de diferença de 5 dias. &#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;and d.Estabelecimento = b.Estabelecimento&#xA;&#x9;where c.IdTransacaoIR = -1 and b.NSU is not null &#xA;&#xA;&#x9;-- join via Autorizacao, Valor, Bandeira, Adquirente (Somente para Rede) e dif. datas (data = dtTransacao) menor ou igual que 2 dias. &#xA;&#x9;update fatTransacaoAdquirente&#xA;&#x9;set IdTransacaoIR = b.IdTransacaoIR, &#xA;&#x9;ValorBrutoIR = b.ValorPagamento&#xA;&#x9;from fatTransacaoAdquirente c &#xA;&#x9;inner join dimTransacaoAdquirente a on c.IdTransacaoAdquirente = a.IdTransacaoAdquirente&#xA;&#x9;inner join dimTransacaoIR b on a.NroAutorizacao = b.NroAutorizacao&#xA;&#x9;&#x9;&#x9;and DATEDIFF(d, a.DtCaptura, b.DtTransacao) between -2 and 2 -- Limite de diferença de 5 dias. &#xA;&#x9;&#x9;&#x9;and c.ValorBrutoAdquirente = b.ValorPagamento&#xA;&#x9;&#x9;&#x9;and a.Bandeira = b.Bandeira&#xA;&#x9;&#x9;&#x9;and a.Adquirente = b.Adquirente&#xA;&#x9;where c.IdTransacaoIR = -1&#xA;&#x9;and a.Adquirente = 'Rede'&#xA;&#xA;--end " xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Set Venda da Transacao"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{20842FC6-84E6-40B7-8D2B-810F61354896}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Set Venda da Transacao"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{D31E9785-7BAF-404F-A81A-B07A29CDECFA}"
+          SQLTask:SqlStatementSource="-- Seta a Venda da Transação&#xA;update fatTransacaoAdquirente &#xA;set IdVenda = b.IdVenda &#xA;from fatTransacaoAdquirente a&#xA;inner join fatConciliacaoVenda b on a.IdTransacaoAdquirente = b.IdTransacaoAdquirente&#xA;where a.IdTransacaoAdquirente &lt;&gt; -1&#xA;&#xA;&#xA;-- Legado Ativo&#xA;select is_bileto, &#xA;&#x9;&#x9;numero_venda_ir,  &#xA;&#x9;&#x9;plataforma_utilizada, &#xA;&#x9;&#x9;nome_evento as NomeEvento, &#xA;&#x9;&#x9;id_evento, &#xA;&#x9;&#x9;min(data_evento) as DataEvento, &#xA;&#x9;&#x9;nome_local, &#xA;&#x9;&#x9;tipo_evento &#xA;into #tmp&#xA;from dsVendaAtivaLegadoHist&#xA;group by is_bileto, &#xA;&#x9;&#x9;numero_venda_ir,  &#xA;&#x9;&#x9;plataforma_utilizada, &#xA;&#x9;&#x9;nome_evento, &#xA;&#x9;&#x9;id_evento, &#xA;&#x9;&#x9;nome_local, &#xA;&#x9;&#x9;tipo_evento &#xA;-- Legado cancelado&#xA;insert into #tmp&#xA;select is_bileto, &#xA;&#x9;&#x9;numero_venda_ir,  &#xA;&#x9;&#x9;plataforma_utilizada, &#xA;&#x9;&#x9;nome_evento as NomeEvento, &#xA;&#x9;&#x9;id_evento, &#xA;&#x9;&#x9;min(data_evento) as DataEvento, &#xA;&#x9;&#x9;nome_local, &#xA;&#x9;&#x9;tipo_evento &#xA;from dsVendaCanceladaLegadoHist&#xA;group by is_bileto, &#xA;&#x9;&#x9;numero_venda_ir,  &#xA;&#x9;&#x9;plataforma_utilizada, &#xA;&#x9;&#x9;nome_evento, &#xA;&#x9;&#x9;id_evento, &#xA;&#x9;&#x9;nome_local, &#xA;&#x9;&#x9;tipo_evento &#xA;-- Bileto Ativo&#xA;insert into #tmp&#xA;select is_bileto, &#xA;&#x9;&#x9;numero_venda_ir,  &#xA;&#x9;&#x9;plataforma_utilizada, &#xA;&#x9;&#x9;nome_evento as NomeEvento, &#xA;&#x9;&#x9;id_evento, &#xA;&#x9;&#x9;min(data_evento) as DataEvento, &#xA;&#x9;&#x9;nome_local, &#xA;&#x9;&#x9;tipo_evento &#xA;from dsVendaAtivaBiletoHist&#xA;group by is_bileto, &#xA;&#x9;&#x9;numero_venda_ir,  &#xA;&#x9;&#x9;plataforma_utilizada, &#xA;&#x9;&#x9;nome_evento, &#xA;&#x9;&#x9;id_evento, &#xA;&#x9;&#x9;nome_local, &#xA;&#x9;&#x9;tipo_evento &#xA;-- Bileto cancelado&#xA;insert into #tmp&#xA;select is_bileto, &#xA;&#x9;&#x9;numero_venda_ir,  &#xA;&#x9;&#x9;plataforma_utilizada, &#xA;&#x9;&#x9;nome_evento as NomeEvento, &#xA;&#x9;&#x9;id_evento, &#xA;&#x9;&#x9;min(data_evento) as DataEvento, &#xA;&#x9;&#x9;nome_local, &#xA;&#x9;&#x9;tipo_evento &#xA;from dsVendaCanceladaBiletoHist&#xA;group by is_bileto, &#xA;&#x9;&#x9;numero_venda_ir,  &#xA;&#x9;&#x9;plataforma_utilizada, &#xA;&#x9;&#x9;nome_evento, &#xA;&#x9;&#x9;id_evento, &#xA;&#x9;&#x9;nome_local, &#xA;&#x9;&#x9;tipo_evento &#xA;&#xA;&#xA;update dimVenda &#xA;set NomeEvento = b.NomeEvento, &#xA;DataEvento = b.DataEvento, &#xA;NomeLocal = b.nome_local, &#xA;TipoEvento = b.tipo_evento, &#xA;plataforma_utilizada = b.plataforma_utilizada&#xA;from dimVenda a&#xA;inner join #tmp b on a.is_bileto = b.is_bileto&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;and a.numero_venda_ir = b.numero_venda_ir&#xA;&#xA;drop table #tmp" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
   </DTS:Executables>
@@ -659,11 +675,11 @@
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint 27]"
       DTS:CreationName=""
-      DTS:DTSID="{6FA672C5-8857-49C3-9F74-BCCFC82837F6}"
+      DTS:DTSID="{58FD52E1-6DE1-42BF-B153-8D744F72C70E}"
       DTS:From="Package\Load fatConciliacaoLoteVenda"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint 27"
-      DTS:To="Package\Load fatPagamentoRecebivel" />
+      DTS:To="Package\Set Venda da Transacao" />
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint 28]"
       DTS:CreationName=""
@@ -688,6 +704,14 @@
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint 3"
       DTS:To="Package\Load fatTransacaoAdquirente" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 30]"
+      DTS:CreationName=""
+      DTS:DTSID="{E192B8AF-B8BC-43A1-8620-5976F396B4A4}"
+      DTS:From="Package\Set Venda da Transacao"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 30"
+      DTS:To="Package\Load fatPagamentoRecebivel" />
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint 4]"
       DTS:CreationName=""
@@ -760,7 +784,7 @@
         <NodeLayout
           Size="165,42"
           Id="Package\Clear DS Sales IR"
-          TopLeft="1193,642" />
+          TopLeft="779,639" />
         <NodeLayout
           Size="173,42"
           Id="Package\Load dimAdquirente"
@@ -820,11 +844,11 @@
         <NodeLayout
           Size="221,42"
           Id="Package\Load fatConciliacaoLoteVenda"
-          TopLeft="1408,557" />
+          TopLeft="1229,552" />
         <NodeLayout
           Size="201,42"
           Id="Package\Load fatConciliacaoVenda"
-          TopLeft="1185,479" />
+          TopLeft="1006,474" />
         <NodeLayout
           Size="168,42"
           Id="Package\Load fatFluxoCaixa"
@@ -832,7 +856,7 @@
         <NodeLayout
           Size="215,42"
           Id="Package\Load fatPagamentoRecebivel"
-          TopLeft="1168,560" />
+          TopLeft="754,557" />
         <NodeLayout
           Size="217,42"
           Id="Package\Load fatTransacaoAdquirente"
@@ -844,7 +868,7 @@
         <NodeLayout
           Size="197,42"
           Id="Package\Set Cancelamento Venda"
-          TopLeft="1421,479" />
+          TopLeft="1242,474" />
         <NodeLayout
           Size="254,42"
           Id="Package\Set Lote into fatTransacaoAdquirente"
@@ -861,6 +885,10 @@
           Size="221,42"
           Id="Package\Set TransacaoIR fatTransacao"
           TopLeft="1469.46428571429,220.285714285714" />
+        <NodeLayout
+          Size="193,42"
+          Id="Package\Set Venda da Transacao"
+          TopLeft="1011.5,558.5" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
           TopLeft="648.75,119">
@@ -1271,26 +1299,26 @@
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-656.6,366.5"
+              EndConnector="-835.6,361.5"
               Start="0,0"
-              End="-656.6,359">
+              End="-835.6,354">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,253.395178197065" />
+                    End="0,249.883647798742" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,253.395178197065"
-                    Point2="0,257.395178197065"
-                    Point3="-4,257.395178197065" />
+                    Point1="0,249.883647798742"
+                    Point2="0,253.883647798742"
+                    Point3="-4,253.883647798742" />
                   <mssgle:LineSegment
-                    End="-652.6,257.395178197065" />
+                    End="-831.6,253.883647798742" />
                   <mssgle:CubicBezierSegment
-                    Point1="-652.6,257.395178197065"
-                    Point2="-656.6,257.395178197065"
-                    Point3="-656.6,261.395178197065" />
+                    Point1="-831.6,253.883647798742"
+                    Point2="-835.6,253.883647798742"
+                    Point3="-835.6,257.883647798742" />
                   <mssgle:LineSegment
-                    End="-656.6,359" />
+                    End="-835.6,354" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1305,26 +1333,26 @@
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="311.97380952381,56.535714285714"
+              EndConnector="132.97380952381,51.535714285714"
               Start="0,0"
-              End="311.97380952381,49.035714285714">
+              End="132.97380952381,44.035714285714">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,21.8468785843432" />
+                    End="0,19.5609891327904" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,21.8468785843432"
-                    Point2="0,25.8468785843432"
-                    Point3="4,25.8468785843432" />
+                    Point1="0,19.5609891327904"
+                    Point2="0,23.5609891327904"
+                    Point3="4,23.5609891327904" />
                   <mssgle:LineSegment
-                    End="307.97380952381,25.8468785843432" />
+                    End="128.97380952381,23.5609891327904" />
                   <mssgle:CubicBezierSegment
-                    Point1="307.97380952381,25.8468785843432"
-                    Point2="311.97380952381,25.8468785843432"
-                    Point3="311.97380952381,29.8468785843432" />
+                    Point1="128.97380952381,23.5609891327904"
+                    Point2="132.97380952381,23.5609891327904"
+                    Point3="132.97380952381,27.5609891327904" />
                   <mssgle:LineSegment
-                    End="311.97380952381,49.035714285714" />
+                    End="132.97380952381,44.035714285714" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1339,26 +1367,26 @@
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="587.885714285714,131.428571428571"
+              EndConnector="408.885714285714,126.428571428571"
               Start="0,0"
-              End="587.885714285714,123.928571428571">
+              End="408.885714285714,118.928571428571">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,76.8312087536746" />
+                    End="0,73.7561084206544" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,76.8312087536746"
-                    Point2="0,80.8312087536746"
-                    Point3="4,80.8312087536746" />
+                    Point1="0,73.7561084206544"
+                    Point2="0,77.7561084206544"
+                    Point3="4,77.7561084206544" />
                   <mssgle:LineSegment
-                    End="583.885714285714,80.8312087536746" />
+                    End="404.885714285714,77.7561084206544" />
                   <mssgle:CubicBezierSegment
-                    Point1="583.885714285714,80.8312087536746"
-                    Point2="587.885714285714,80.8312087536746"
-                    Point3="587.885714285714,84.8312087536746" />
+                    Point1="404.885714285714,77.7561084206544"
+                    Point2="408.885714285714,77.7561084206544"
+                    Point3="408.885714285714,81.7561084206544" />
                   <mssgle:LineSegment
-                    End="587.885714285714,123.928571428571" />
+                    End="408.885714285714,118.928571428571" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1369,7 +1397,7 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 24]"
-          TopLeft="1386,500">
+          TopLeft="1207,495">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -1391,7 +1419,7 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 25]"
-          TopLeft="1519,521">
+          TopLeft="1340,516">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -1417,26 +1445,26 @@
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-472.7,277"
+              EndConnector="-651.7,272"
               Start="0,0"
-              End="-472.7,269.5">
+              End="-651.7,264.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,149.21133736929" />
+                    End="0,146.445789763346" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,149.21133736929"
-                    Point2="0,153.21133736929"
-                    Point3="-4,153.21133736929" />
+                    Point1="0,146.445789763346"
+                    Point2="0,150.445789763346"
+                    Point3="-4,150.445789763346" />
                   <mssgle:LineSegment
-                    End="-468.7,153.21133736929" />
+                    End="-647.7,150.445789763346" />
                   <mssgle:CubicBezierSegment
-                    Point1="-468.7,153.21133736929"
-                    Point2="-472.7,153.21133736929"
-                    Point3="-472.7,157.21133736929" />
+                    Point1="-647.7,150.445789763346"
+                    Point2="-651.7,150.445789763346"
+                    Point3="-651.7,154.445789763346" />
                   <mssgle:LineSegment
-                    End="-472.7,269.5" />
+                    End="-651.7,264.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1447,18 +1475,18 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 27]"
-          TopLeft="1408,579.5">
+          TopLeft="1229,576.25">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-25,0"
+              EndConnector="-24.5,0"
               Start="0,0"
-              End="-17.5,0">
+              End="-17,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="-17.5,0" />
+                    End="-17,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1503,7 +1531,7 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 29]"
-          TopLeft="1275.5,602">
+          TopLeft="861.5,599">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -1549,6 +1577,28 @@
                     Point3="-199.071428571429,60.9155178508307" />
                   <mssgle:LineSegment
                     End="-199.071428571429,98.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 30]"
+          TopLeft="1011.5,578.75">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-42.5,0"
+              Start="0,0"
+              End="-35,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-35,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
