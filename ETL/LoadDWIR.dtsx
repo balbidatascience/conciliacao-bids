@@ -11,8 +11,8 @@
   DTS:LocaleID="1046"
   DTS:ObjectName="LoadDWIR"
   DTS:PackageType="5"
-  DTS:VersionBuild="153"
-  DTS:VersionGUID="{7794F720-298E-4E24-BB91-D4B3C0A2F6A0}">
+  DTS:VersionBuild="163"
+  DTS:VersionGUID="{EEE6AC5A-7C0D-455A-922C-A611B809A8B2}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
@@ -26,7 +26,7 @@
       DTS:LocaleID="-1"
       DTS:ObjectName="Clear dimTransacaoIRNaoConciliada"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2016; © 2015 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="0">
+      DTS:ThreadHint="3">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -77,7 +77,7 @@
       DTS:LocaleID="-1"
       DTS:ObjectName="Load dimAdquirente"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2016; © 2015 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="7">
+      DTS:ThreadHint="6">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -111,7 +111,7 @@
       DTS:LocaleID="-1"
       DTS:ObjectName="Load dimDomicilioBancario"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2016; © 2015 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="2">
+      DTS:ThreadHint="0">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -128,7 +128,7 @@
       DTS:LocaleID="-1"
       DTS:ObjectName="Load dimLoteVenda"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2016; © 2015 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="3">
+      DTS:ThreadHint="1">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -145,7 +145,7 @@
       DTS:LocaleID="-1"
       DTS:ObjectName="Load dimMeioCaptura"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2016; © 2015 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="4">
+      DTS:ThreadHint="7">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -163,7 +163,7 @@
       DTS:LocaleID="-1"
       DTS:ObjectName="Load dimPagamento"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2016; © 2015 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="5">
+      DTS:ThreadHint="2">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -180,7 +180,7 @@
       DTS:LocaleID="-1"
       DTS:ObjectName="Load dimProduto"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2016; © 2015 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="6">
+      DTS:ThreadHint="3">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -198,7 +198,7 @@
       DTS:LocaleID="-1"
       DTS:ObjectName="Load dimTempo"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2016; © 2015 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="1">
+      DTS:ThreadHint="4">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -215,12 +215,12 @@
       DTS:LocaleID="-1"
       DTS:ObjectName="Load dimTransacaoAdquirente"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2016; © 2015 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="0">
+      DTS:ThreadHint="5">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
           SQLTask:Connection="{D31E9785-7BAF-404F-A81A-B07A29CDECFA}"
-          SQLTask:SqlStatementSource="MERGE INTO dimTransacaoAdquirente AS Target&#xA;USING (&#xA;&#x9;SELECT [NroAutorizacao]&#xA;&#x9;&#x9;&#x9;  ,[IDERP]&#xA;&#x9;&#x9;&#x9;  ,[IDEQUALS]&#xA;&#x9;&#x9;&#x9;  ,[Bandeira]&#xA;&#x9;&#x9;&#x9;  ,[Adquirente]&#xA;&#x9;&#x9;&#x9;  ,[LoteRO]&#xA;&#x9;&#x9;&#x9;  ,[Data]&#xA;&#x9;&#x9;&#x9;  ,[DtCaptura]&#xA;&#x9;&#x9;&#x9;  ,[Hora]&#xA;&#x9;&#x9;&#x9;  ,[NroCartao]&#xA;&#x9;&#x9;&#x9;  ,[OrigemCartao]&#xA;&#x9;&#x9;&#x9;  ,[NSU]&#xA;&#x9;&#x9;&#x9;  ,[TID]&#xA;&#x9;&#x9;&#x9;  ,[Parc]&#xA;&#x9;&#x9;&#x9;  ,[LoteUnico]&#xA;&#x9;&#x9;&#x9;  ,[NroReferencia]&#xA;&#x9;&#x9;&#x9;  ,replace(replace([Taxa], '%', ''), ',', '.') as Taxa&#xA;&#x9;&#x9;&#x9;  ,replace(replace([TxContrato], '%', ''), ',', '.') as TaxaContrato&#xA;&#x9;&#x9;&#x9;  ,[Situacao]&#xA;&#x9;&#x9;&#x9;  ,[DtSituacao]&#xA;&#x9;&#x9;&#x9;  ,[Conciliada]&#xA;&#x9;&#x9;&#x9;  ,[MJustificativa]&#xA;&#x9;&#x9;&#x9;  ,[NomeTarefa]&#xA;&#x9;&#x9;&#x9;  ,[SituacaoTarefa]&#xA;&#x9;&#x9;&#x9;  ,[ConciliacaoParam]&#xA;&#x9;&#x9;&#x9;  ,[DtRegistro]&#xA;&#x9;&#x9;FROM [dbo].[dsTransacaoAdquirente] &#xA;) AS Source (NroAutorizacao&#xA;&#x9;&#x9;&#x9;  ,[IDERP]&#xA;&#x9;&#x9;&#x9;  ,[IDEQUALS]&#xA;&#x9;&#x9;&#x9;  ,[Bandeira]&#xA;&#x9;&#x9;&#x9;  ,[Adquirente]&#xA;&#x9;&#x9;&#x9;  ,[LoteRO]&#xA;&#x9;&#x9;&#x9;  ,[Data]&#xA;&#x9;&#x9;&#x9;  ,[DtCaptura]&#xA;&#x9;&#x9;&#x9;  ,[Hora]&#xA;&#x9;&#x9;&#x9;  ,[NroCartao]&#xA;&#x9;&#x9;&#x9;  ,[OrigemCartao]&#xA;&#x9;&#x9;&#x9;  ,[NSU]&#xA;&#x9;&#x9;&#x9;  ,[TID]&#xA;&#x9;&#x9;&#x9;  ,[Parc]&#xA;&#x9;&#x9;&#x9;  ,[LoteUnico]&#xA;&#x9;&#x9;&#x9;  ,[NroReferencia]&#xA;&#x9;&#x9;&#x9;  ,Taxa&#xA;&#x9;&#x9;&#x9;  ,TaxaContrato&#xA;&#x9;&#x9;&#x9;  ,[Situacao]&#xA;&#x9;&#x9;&#x9;  ,[DtSituacao]&#xA;&#x9;&#x9;&#x9;  ,[Conciliada]&#xA;&#x9;&#x9;&#x9;  ,[MJustificativa]&#xA;&#x9;&#x9;&#x9;  ,[NomeTarefa]&#xA;&#x9;&#x9;&#x9;  ,[SituacaoTarefa]&#xA;&#x9;&#x9;&#x9;  ,[ConciliacaoParam]&#xA;&#x9;&#x9;&#x9;  ,[DtRegistro]&#xA;&#x9;&#x9;&#x9;)&#xA;ON (Target.IDEQUALS  = Source.[IDEQUALS])&#xA;&#xA;WHEN NOT MATCHED BY TARGET THEN&#xA; INSERT (NroAutorizacao&#xA;&#x9;&#x9;&#x9;  ,[IDERP]&#xA;&#x9;&#x9;&#x9;  ,[IDEQUALS]&#xA;&#x9;&#x9;&#x9;  ,[Bandeira]&#xA;&#x9;&#x9;&#x9;  ,[Adquirente]&#xA;&#x9;&#x9;&#x9;  ,[LoteRO]&#xA;&#x9;&#x9;&#x9;  ,[Data]&#xA;&#x9;&#x9;&#x9;  ,[DtCaptura]&#xA;&#x9;&#x9;&#x9;  ,[Hora]&#xA;&#x9;&#x9;&#x9;  ,[NroCartao]&#xA;&#x9;&#x9;&#x9;  ,[OrigemCartao]&#xA;&#x9;&#x9;&#x9;  ,[NSU]&#xA;&#x9;&#x9;&#x9;  ,[TID]&#xA;&#x9;&#x9;&#x9;  ,[Parc]&#xA;&#x9;&#x9;&#x9;  ,[LoteUnico]&#xA;&#x9;&#x9;&#x9;  ,[NroReferencia]&#xA;&#x9;&#x9;&#x9;  ,Taxa&#xA;&#x9;&#x9;&#x9;  ,TaxaContrato&#xA;&#x9;&#x9;&#x9;  ,[Situacao]&#xA;&#x9;&#x9;&#x9;  ,[DtSituacao]&#xA;&#x9;&#x9;&#x9;  ,[Conciliada]&#xA;&#x9;&#x9;&#x9;  ,[MJustificativa]&#xA;&#x9;&#x9;&#x9;  ,[NomeTarefa]&#xA;&#x9;&#x9;&#x9;  ,[SituacaoTarefa]&#xA;&#x9;&#x9;&#x9;  ,[ConciliacaoParam]&#xA;&#x9;&#x9;&#x9;  ,[DtRegistro])&#xA; VALUES (Source.NroAutorizacao &#xA;&#x9;&#x9;&#x9;  ,Source.[IDERP]&#xA;&#x9;&#x9;&#x9;  ,Source.[IDEQUALS]&#xA;&#x9;&#x9;&#x9;  ,Source.[Bandeira]&#xA;&#x9;&#x9;&#x9;  ,Source.[Adquirente]&#xA;&#x9;&#x9;&#x9;  ,Source.[LoteRO]&#xA;&#x9;&#x9;&#x9;  ,Source.[Data]&#xA;&#x9;&#x9;&#x9;  ,Source.[DtCaptura]&#xA;&#x9;&#x9;&#x9;  ,Source.[Hora]&#xA;&#x9;&#x9;&#x9;  ,Source.[NroCartao]&#xA;&#x9;&#x9;&#x9;  ,Source.[OrigemCartao]&#xA;&#x9;&#x9;&#x9;  ,Source.[NSU]&#xA;&#x9;&#x9;&#x9;  ,Source.[TID]&#xA;&#x9;&#x9;&#x9;  ,Source.[Parc]&#xA;&#x9;&#x9;&#x9;  ,Source.[LoteUnico]&#xA;&#x9;&#x9;&#x9;  ,Source.[NroReferencia]&#xA;&#x9;&#x9;&#x9;  ,Source.Taxa&#xA;&#x9;&#x9;&#x9;  ,Source.TaxaContrato&#xA;&#x9;&#x9;&#x9;  ,Source.[Situacao]&#xA;&#x9;&#x9;&#x9;  ,Source.[DtSituacao]&#xA;&#x9;&#x9;&#x9;  ,Source.[Conciliada]&#xA;&#x9;&#x9;&#x9;  ,Source.[MJustificativa]&#xA;&#x9;&#x9;&#x9;  ,Source.[NomeTarefa]&#xA;&#x9;&#x9;&#x9;  ,Source.[SituacaoTarefa]&#xA;&#x9;&#x9;&#x9;  ,Source.[ConciliacaoParam]&#xA;&#x9;&#x9;&#x9;  ,Source.[DtRegistro])&#xA;WHEN MATCHED THEN UPDATE &#xA; SET Target.Conciliada = Source.Conciliada,&#xA;  Target.DtSituacao = Source.DtSituacao,&#xA;  Target.IDERP = Source.IDERP, &#xA;  Target.Bandeira = Source.Bandeira,&#xA;  Target.Adquirente = Source.Adquirente,&#xA;  Target.MJustificativa  = Source.MJustificativa, &#xA;  Target.NomeTarefa = Source.NomeTarefa,&#xA;  Target.NroReferencia = Source.NroReferencia,&#xA;  Target.Situacao = Source.Situacao,&#xA;  Target.SituacaoTarefa = Source.SituacaoTarefa,&#xA;  Target.LoteUnico = Source.LoteUnico;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          SQLTask:SqlStatementSource="MERGE INTO dimTransacaoAdquirente AS Target&#xA;USING (&#xA;&#x9;&#xA;&#x9;SELECT distinct [NroAutorizacao]&#xA;&#x9;&#x9;&#x9;  ,MAX([IDERP]) as IDERP&#xA;&#x9;&#x9;&#x9;  ,MAX([IDEQUALS]) as IDEQUALS &#xA;&#x9;&#x9;&#x9;  ,[Bandeira]&#xA;&#x9;&#x9;&#x9;  ,[Adquirente]&#xA;&#x9;&#x9;&#x9;  ,[LoteRO]&#xA;&#x9;&#x9;&#x9;  ,[Data]&#xA;&#x9;&#x9;&#x9;  ,[DtCaptura]&#xA;&#x9;&#x9;&#x9;  ,[Hora]&#xA;&#x9;&#x9;&#x9;  ,[NroCartao]&#xA;&#x9;&#x9;&#x9;  ,[OrigemCartao]&#xA;&#x9;&#x9;&#x9;  ,[NSU]&#xA;&#x9;&#x9;&#x9;  ,[TID]&#xA;&#x9;&#x9;&#x9;  ,[Parc]&#xA;&#x9;&#x9;&#x9;  ,[LoteUnico]&#xA;&#x9;&#x9;&#x9;  ,[NroReferencia]&#xA;&#x9;&#x9;&#x9;  ,replace(replace([Taxa], '%', ''), ',', '.') as Taxa&#xA;&#x9;&#x9;&#x9;  ,replace(replace([TxContrato], '%', ''), ',', '.') as TaxaContrato&#xA;&#x9;&#x9;&#x9;  ,MAX(Situacao) as Situacao&#xA;&#x9;&#x9;&#x9;  ,MAX([DtSituacao]) as DtSituacao&#xA;&#x9;&#x9;&#x9;  ,MAX([Conciliada]) as Conciliada&#xA;&#x9;&#x9;&#x9;  ,[MJustificativa]&#xA;&#x9;&#x9;&#x9;  ,[NomeTarefa]&#xA;&#x9;&#x9;&#x9;  ,[SituacaoTarefa]&#xA;&#x9;&#x9;&#x9;  ,[ConciliacaoParam]&#xA;&#x9;&#x9;&#x9;  ,MAX([DtRegistro]) as DtRegistro&#xA;&#x9;FROM [dbo].[dsTransacaoAdquirente] &#xA;&#x9;group by [NroAutorizacao]&#xA;&#x9;&#x9;&#x9;  ,[Bandeira]&#xA;&#x9;&#x9;&#x9;  ,[Adquirente]&#xA;&#x9;&#x9;&#x9;  ,[LoteRO]&#xA;&#x9;&#x9;&#x9;  ,[Data]&#xA;&#x9;&#x9;&#x9;  ,[DtCaptura]&#xA;&#x9;&#x9;&#x9;  ,[Hora]&#xA;&#x9;&#x9;&#x9;  ,[NroCartao]&#xA;&#x9;&#x9;&#x9;  ,[OrigemCartao]&#xA;&#x9;&#x9;&#x9;  ,[NSU]&#xA;&#x9;&#x9;&#x9;  ,[TID]&#xA;&#x9;&#x9;&#x9;  ,[Parc]&#xA;&#x9;&#x9;&#x9;  ,[LoteUnico]&#xA;&#x9;&#x9;&#x9;  ,[NroReferencia]&#xA;&#x9;&#x9;&#x9;  ,Taxa&#xA;&#x9;&#x9;&#x9;  ,TxContrato&#xA;&#x9;&#x9;&#x9;  ,[MJustificativa]&#xA;&#x9;&#x9;&#x9;  ,[NomeTarefa]&#xA;&#x9;&#x9;&#x9;  ,[SituacaoTarefa]&#xA;&#x9;&#x9;&#x9;  ,[ConciliacaoParam]&#xA;&#xA;) AS Source (NroAutorizacao&#xA;&#x9;&#x9;&#x9;  ,[IDERP]&#xA;&#x9;&#x9;&#x9;  ,[IDEQUALS]&#xA;&#x9;&#x9;&#x9;  ,[Bandeira]&#xA;&#x9;&#x9;&#x9;  ,[Adquirente]&#xA;&#x9;&#x9;&#x9;  ,[LoteRO]&#xA;&#x9;&#x9;&#x9;  ,[Data]&#xA;&#x9;&#x9;&#x9;  ,[DtCaptura]&#xA;&#x9;&#x9;&#x9;  ,[Hora]&#xA;&#x9;&#x9;&#x9;  ,[NroCartao]&#xA;&#x9;&#x9;&#x9;  ,[OrigemCartao]&#xA;&#x9;&#x9;&#x9;  ,[NSU]&#xA;&#x9;&#x9;&#x9;  ,[TID]&#xA;&#x9;&#x9;&#x9;  ,[Parc]&#xA;&#x9;&#x9;&#x9;  ,[LoteUnico]&#xA;&#x9;&#x9;&#x9;  ,[NroReferencia]&#xA;&#x9;&#x9;&#x9;  ,Taxa&#xA;&#x9;&#x9;&#x9;  ,TaxaContrato&#xA;&#x9;&#x9;&#x9;  ,[Situacao]&#xA;&#x9;&#x9;&#x9;  ,[DtSituacao]&#xA;&#x9;&#x9;&#x9;  ,[Conciliada]&#xA;&#x9;&#x9;&#x9;  ,[MJustificativa]&#xA;&#x9;&#x9;&#x9;  ,[NomeTarefa]&#xA;&#x9;&#x9;&#x9;  ,[SituacaoTarefa]&#xA;&#x9;&#x9;&#x9;  ,[ConciliacaoParam]&#xA;&#x9;&#x9;&#x9;  ,[DtRegistro]&#xA;&#x9;&#x9;&#x9;)&#xA;--ON (Target.IDEQUALS  = Source.[IDEQUALS])&#xA;ON (isnull(Target.Adquirente, 0) = isnull(Source.Adquirente, 0)&#xA;&#x9;and isnull(Target.NSU, 0) = isnull(Source.NSU, 0)&#xA;&#x9;and isnull(Target.NroAutorizacao, 0) = isnull(Source.NroAutorizacao, 0)&#xA;&#x9;and isnull(Target.TID, 0) = isnull(Source.TID, 0)&#xA;&#x9;and isnull(Target.DtCaptura, 0) = isnull(Source.DtCaptura, 0)&#xA;&#x9;and isnull(Target.LoteUnico, 0) = isnull(Source.LoteUnico, 0)&#xA;&#x9;and isnull(Target.LoteUnico, 0) = isnull(Source.LoteUnico, 0))&#xA;&#xA;WHEN NOT MATCHED BY TARGET THEN&#xA; INSERT (NroAutorizacao&#xA;&#x9;&#x9;&#x9;  ,[IDERP]&#xA;&#x9;&#x9;&#x9;  ,[IDEQUALS]&#xA;&#x9;&#x9;&#x9;  ,[Bandeira]&#xA;&#x9;&#x9;&#x9;  ,[Adquirente]&#xA;&#x9;&#x9;&#x9;  ,[LoteRO]&#xA;&#x9;&#x9;&#x9;  ,[Data]&#xA;&#x9;&#x9;&#x9;  ,[DtCaptura]&#xA;&#x9;&#x9;&#x9;  ,[Hora]&#xA;&#x9;&#x9;&#x9;  ,[NroCartao]&#xA;&#x9;&#x9;&#x9;  ,[OrigemCartao]&#xA;&#x9;&#x9;&#x9;  ,[NSU]&#xA;&#x9;&#x9;&#x9;  ,[TID]&#xA;&#x9;&#x9;&#x9;  ,[Parc]&#xA;&#x9;&#x9;&#x9;  ,[LoteUnico]&#xA;&#x9;&#x9;&#x9;  ,[NroReferencia]&#xA;&#x9;&#x9;&#x9;  ,Taxa&#xA;&#x9;&#x9;&#x9;  ,TaxaContrato&#xA;&#x9;&#x9;&#x9;  ,[Situacao]&#xA;&#x9;&#x9;&#x9;  ,[DtSituacao]&#xA;&#x9;&#x9;&#x9;  ,[Conciliada]&#xA;&#x9;&#x9;&#x9;  ,[MJustificativa]&#xA;&#x9;&#x9;&#x9;  ,[NomeTarefa]&#xA;&#x9;&#x9;&#x9;  ,[SituacaoTarefa]&#xA;&#x9;&#x9;&#x9;  ,[ConciliacaoParam]&#xA;&#x9;&#x9;&#x9;  ,[DtRegistro])&#xA; VALUES (Source.NroAutorizacao &#xA;&#x9;&#x9;&#x9;  ,Source.[IDERP]&#xA;&#x9;&#x9;&#x9;  ,Source.[IDEQUALS]&#xA;&#x9;&#x9;&#x9;  ,Source.[Bandeira]&#xA;&#x9;&#x9;&#x9;  ,Source.[Adquirente]&#xA;&#x9;&#x9;&#x9;  ,Source.[LoteRO]&#xA;&#x9;&#x9;&#x9;  ,Source.[Data]&#xA;&#x9;&#x9;&#x9;  ,Source.[DtCaptura]&#xA;&#x9;&#x9;&#x9;  ,Source.[Hora]&#xA;&#x9;&#x9;&#x9;  ,Source.[NroCartao]&#xA;&#x9;&#x9;&#x9;  ,Source.[OrigemCartao]&#xA;&#x9;&#x9;&#x9;  ,Source.[NSU]&#xA;&#x9;&#x9;&#x9;  ,Source.[TID]&#xA;&#x9;&#x9;&#x9;  ,Source.[Parc]&#xA;&#x9;&#x9;&#x9;  ,Source.[LoteUnico]&#xA;&#x9;&#x9;&#x9;  ,Source.[NroReferencia]&#xA;&#x9;&#x9;&#x9;  ,Source.Taxa&#xA;&#x9;&#x9;&#x9;  ,Source.TaxaContrato&#xA;&#x9;&#x9;&#x9;  ,Source.[Situacao]&#xA;&#x9;&#x9;&#x9;  ,Source.[DtSituacao]&#xA;&#x9;&#x9;&#x9;  ,Source.[Conciliada]&#xA;&#x9;&#x9;&#x9;  ,Source.[MJustificativa]&#xA;&#x9;&#x9;&#x9;  ,Source.[NomeTarefa]&#xA;&#x9;&#x9;&#x9;  ,Source.[SituacaoTarefa]&#xA;&#x9;&#x9;&#x9;  ,Source.[ConciliacaoParam]&#xA;&#x9;&#x9;&#x9;  ,Source.[DtRegistro])&#xA;WHEN MATCHED THEN UPDATE &#xA; SET Target.Conciliada = Source.Conciliada,&#xA;  Target.DtSituacao = Source.DtSituacao,&#xA;  --Target.IDERP = Source.IDERP, &#xA;  --Target.Bandeira = Source.Bandeira,&#xA;  --Target.Adquirente = Source.Adquirente,&#xA;  Target.MJustificativa  = Source.MJustificativa, &#xA;  Target.NomeTarefa = Source.NomeTarefa,&#xA;  --Target.NroReferencia = Source.NroReferencia,&#xA;  Target.Situacao = Source.Situacao,&#xA;  Target.SituacaoTarefa = Source.SituacaoTarefa;&#xA;  --Target.LoteUnico = Source.LoteUnico;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
@@ -232,7 +232,7 @@
       DTS:LocaleID="-1"
       DTS:ObjectName="Load dimTransacaoIR"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2016; © 2015 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="0">
+      DTS:ThreadHint="3">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -249,7 +249,7 @@
       DTS:LocaleID="-1"
       DTS:ObjectName="Load dimTransacaoIRNaoConciliada"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2016; © 2015 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="0">
+      DTS:ThreadHint="3">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -288,7 +288,7 @@
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
           SQLTask:Connection="{D31E9785-7BAF-404F-A81A-B07A29CDECFA}"
-          SQLTask:SqlStatementSource="&#xA;INSERT INTO [dbo].[dimVenda]&#xA;           ([is_bileto]&#xA;           ,[gateway]&#xA;           ,[numero_venda_ir]&#xA;           ,[venda_bilheteria_id]&#xA;           ,[codigo_gateway]&#xA;           ,[nsu_host]&#xA;           ,[nsu_sitef]&#xA;           ,[paypal_id]&#xA;           ,[numero_autorizacao_adquirente]&#xA;           ,[data_compra]&#xA;           --,[bandeira]&#xA;           --,[tipo_cartao]&#xA;           --,[nome_forma_pagamento]&#xA;           ,[valor_taxa_conveniencia_total]&#xA;           ,[valor_taxa_entrega_total]&#xA;           ,[valor_juros_total]&#xA;           ,[valor_compra_original_total]&#xA;           --,[numero_parcelas]&#xA;           ,[numero_cartao]&#xA;           ,[nome_portador_cartao]&#xA;           ,[status_compra]&#xA;           ,[nome_comprador]&#xA;           ,[telefone_comprador]&#xA;           ,[id_usuario]&#xA;           ,[ip_comprador]&#xA;           ,[plataforma_utilizada]&#xA;&#x9;&#x9;   ,[id_produtor_evento]&#xA;&#x9;&#x9;   ,[nome_produtor_evento]&#xA;           ,[nota_fiscal_estabelecimento_sitef]&#xA;           ,[data_venda_completa]&#xA;           ,[nomes_precos_ingressos_unicos])&#xA;SELECT distinct [is_bileto]&#xA;      ,[gateway]&#xA;      ,[numero_venda_ir]&#xA;      ,[venda_bilheteria_id]&#xA;      ,[codigo_gateway]&#xA;      ,[nsu_host]&#xA;      ,[nsu_sitef]&#xA;      ,[paypal_id]&#xA;      ,[numero_autorizacao_adquirente]&#xA;      ,[data_compra]&#xA;      --,[quantidade_ingressos]&#xA;      --,[bandeira]&#xA;      --,[tipo_cartao]&#xA;      --,[nome_forma_pagamento]&#xA;      ,[valor_taxa_conveniencia_total]&#xA;      ,[valor_taxa_entrega_total]&#xA;      ,[valor_juros_total]&#xA;      ,[valor_compra_original_total]&#xA;      --,[numero_parcelas]&#xA;      ,[numero_cartao]&#xA;      ,[nome_portador_cartao]&#xA;      ,[status_compra]&#xA;      ,[nome_comprador]&#xA;      ,[telefone_comprador]&#xA;      ,[id_usuario]&#xA;      ,[ip_comprador]&#xA;      ,[plataforma_utilizada]&#xA;      ,[id_produtor_evento]&#xA;      ,[nome_produtor_evento]&#xA;      --,[nome_evento]&#xA;      --,[id_evento]&#xA;      --,[data_evento]&#xA;      --,[nome_local]&#xA;      --,[tipo_evento]&#xA;      ,[nota_fiscal_estabelecimento_sitef]&#xA;      ,[data_venda_completa]&#xA;      ,[nomes_precos_ingressos_unicos]&#xA;  FROM [dbo].[dsVendaAtivaLegado] &#xA;  where numero_venda_ir not in (select distinct numero_venda_ir from dimVenda)&#xA;&#xA;&#xA;--=================================================&#xA;-- Incluindo vendas do arquivo de cancelamentos&#xA;--=================================================&#xA;&#xA;-- Hardcode para retirar duplicidade&#xA;delete from dsVendaCanceladaLegado where gateway = 'Sitef' and codigo_gateway is null&#xA;&#xA;-- Carrega as vendas que ainda não foram carregadas&#xA;INSERT INTO [dbo].[dimVenda]&#xA;           ([is_bileto]&#xA;           ,[gateway]&#xA;           ,[numero_venda_ir]&#xA;           ,[venda_bilheteria_id]&#xA;           ,[codigo_gateway]&#xA;           ,[nsu_host]&#xA;           ,[nsu_sitef]&#xA;           ,[paypal_id]&#xA;           ,[numero_autorizacao_adquirente]&#xA;           ,[data_compra]&#xA;           ,[valor_juros_total]&#xA;           ,[valor_compra_original_total]&#xA;           ,[status_compra]&#xA;           ,[nome_comprador]&#xA;           ,[telefone_comprador]&#xA;           ,[id_usuario]&#xA;           ,[ip_comprador]&#xA;           ,[nota_fiscal_estabelecimento_sitef])&#xA;SELECT distinct [is_bileto]&#xA;      ,[gateway]&#xA;      ,[numero_venda_ir]&#xA;      ,[venda_bilheteria_id]&#xA;      ,[codigo_gateway]&#xA;      ,[nsu_host]&#xA;      ,[nsu_sitef]&#xA;      ,[paypal_id]&#xA;      ,[numero_autorizacao_adquirente]&#xA;      ,[data_compra]&#xA;      ,[valor_juros_total]&#xA;      ,[valor_compra_original_total]&#xA;      ,[status_compra]&#xA;      ,[nome_comprador]&#xA;      ,[telefone_comprador]&#xA;      ,[id_usuario]&#xA;      ,[ip_comprador]&#xA;      ,[nota_fiscal_estabelecimento_sitef]&#xA;  FROM [dbo].dsVendaCanceladaLegado &#xA;  where numero_venda_ir not in (select distinct numero_venda_ir from dimVenda)" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          SQLTask:SqlStatementSource="&#xA;INSERT INTO [dbo].[dimVenda]&#xA;           ([is_bileto]&#xA;           ,[gateway]&#xA;           ,[numero_venda_ir]&#xA;           ,[venda_bilheteria_id]&#xA;           ,[codigo_gateway]&#xA;           ,[nsu_host]&#xA;           ,[nsu_sitef]&#xA;           ,[paypal_id]&#xA;           ,[numero_autorizacao_adquirente]&#xA;           ,[data_compra]&#xA;           --,[bandeira]&#xA;           --,[tipo_cartao]&#xA;           --,[nome_forma_pagamento]&#xA;           ,[valor_taxa_conveniencia_total]&#xA;           ,[valor_taxa_entrega_total]&#xA;           ,[valor_juros_total]&#xA;           ,[valor_compra_original_total]&#xA;           --,[numero_parcelas]&#xA;           ,[numero_cartao]&#xA;           ,[nome_portador_cartao]&#xA;           ,[status_compra]&#xA;           ,[nome_comprador]&#xA;           ,[telefone_comprador]&#xA;           ,[id_usuario]&#xA;           ,[ip_comprador]&#xA;           ,[plataforma_utilizada]&#xA;&#x9;&#x9;   ,[id_produtor_evento]&#xA;&#x9;&#x9;   ,[nome_produtor_evento]&#xA;           ,[nota_fiscal_estabelecimento_sitef]&#xA;           ,[data_venda_completa]&#xA;           ,[nomes_precos_ingressos_unicos])&#xA;SELECT distinct a.[is_bileto]&#xA;      ,a.[gateway]&#xA;      ,a.[numero_venda_ir]&#xA;      ,a.[venda_bilheteria_id]&#xA;      ,a.[codigo_gateway]&#xA;      ,a.[nsu_host]&#xA;      ,a.[nsu_sitef]&#xA;      ,a.[paypal_id]&#xA;      ,a.[numero_autorizacao_adquirente]&#xA;      ,a.[data_compra]&#xA;      --,[quantidade_ingressos]&#xA;      --,[bandeira]&#xA;      --,[tipo_cartao]&#xA;      --,[nome_forma_pagamento]&#xA;      ,a.[valor_taxa_conveniencia_total]&#xA;      ,a.[valor_taxa_entrega_total]&#xA;      ,a.[valor_juros_total]&#xA;      ,a.[valor_compra_original_total]&#xA;      --,[numero_parcelas]&#xA;      ,a.[numero_cartao]&#xA;      ,a.[nome_portador_cartao]&#xA;      ,a.[status_compra]&#xA;      ,a.[nome_comprador]&#xA;      ,a.[telefone_comprador]&#xA;      ,a.[id_usuario]&#xA;      ,a.[ip_comprador]&#xA;      ,a.[plataforma_utilizada]&#xA;      ,a.[id_produtor_evento]&#xA;      ,a.[nome_produtor_evento]&#xA;      --,[nome_evento]&#xA;      --,[id_evento]&#xA;      --,[data_evento]&#xA;      --,[nome_local]&#xA;      --,[tipo_evento]&#xA;      ,a.[nota_fiscal_estabelecimento_sitef]&#xA;      ,a.[data_venda_completa]&#xA;      ,a.[nomes_precos_ingressos_unicos]&#xA;  FROM [dbo].[dsVendaAtivaLegado] a&#xA; left join dimVenda b on a.numero_venda_ir = b.numero_venda_ir&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;and a.is_bileto = b.is_bileto &#xA;&#x9;  where b.IdVenda is null&#xA;&#xA;&#xA;--=================================================&#xA;-- Incluindo vendas do arquivo de cancelamentos&#xA;--=================================================&#xA;&#xA;-- Hardcode para retirar duplicidade&#xA;delete from dsVendaCanceladaLegado where gateway = 'Sitef' and codigo_gateway is null&#xA;&#xA;-- Carrega as vendas que ainda não foram carregadas&#xA;INSERT INTO [dbo].[dimVenda]&#xA;           ([is_bileto]&#xA;           ,[gateway]&#xA;           ,[numero_venda_ir]&#xA;           ,[venda_bilheteria_id]&#xA;           ,[codigo_gateway]&#xA;           ,[nsu_host]&#xA;           ,[nsu_sitef]&#xA;           ,[paypal_id]&#xA;           ,[numero_autorizacao_adquirente]&#xA;           ,[data_compra]&#xA;           ,[valor_juros_total]&#xA;           ,[valor_compra_original_total]&#xA;           ,[status_compra]&#xA;           ,[nome_comprador]&#xA;           ,[telefone_comprador]&#xA;           ,[id_usuario]&#xA;           ,[ip_comprador]&#xA;           ,[nota_fiscal_estabelecimento_sitef])&#xA;SELECT distinct a.[is_bileto]&#xA;      ,a.[gateway]&#xA;      ,a.[numero_venda_ir]&#xA;      ,a.[venda_bilheteria_id]&#xA;      ,a.[codigo_gateway]&#xA;      ,a.[nsu_host]&#xA;      ,a.[nsu_sitef]&#xA;      ,a.[paypal_id]&#xA;      ,a.[numero_autorizacao_adquirente]&#xA;      ,a.[data_compra]&#xA;      ,a.[valor_juros_total]&#xA;      ,a.[valor_compra_original_total]&#xA;      ,a.[status_compra]&#xA;      ,a.[nome_comprador]&#xA;      ,a.[telefone_comprador]&#xA;      ,a.[id_usuario]&#xA;      ,a.[ip_comprador]&#xA;      ,a.[nota_fiscal_estabelecimento_sitef]&#xA;  FROM [dbo].dsVendaCanceladaLegado a&#xA;  left join dimVenda b on a.numero_venda_ir = b.numero_venda_ir&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;and a.is_bileto = b.is_bileto &#xA;&#x9;  where b.IdVenda is null" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
@@ -300,7 +300,7 @@
       DTS:LocaleID="-1"
       DTS:ObjectName="Load fatCancelamento"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2016; © 2015 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="0">
+      DTS:ThreadHint="3">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -351,7 +351,7 @@
       DTS:LocaleID="-1"
       DTS:ObjectName="Load fatFluxoCaixa"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2016; © 2015 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="2">
+      DTS:ThreadHint="0">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -384,7 +384,7 @@
       DTS:LocaleID="-1"
       DTS:ObjectName="Load fatTransacaoAdquirente"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2016; © 2015 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="0">
+      DTS:ThreadHint="3">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -401,7 +401,7 @@
       DTS:LocaleID="-1"
       DTS:ObjectName="Load fatTransacaoIR"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2016; © 2015 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="0">
+      DTS:ThreadHint="3">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -423,7 +423,7 @@
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
           SQLTask:Connection="{D31E9785-7BAF-404F-A81A-B07A29CDECFA}"
-          SQLTask:SqlStatementSource="-- Separando os cancelamentos&#xA;select distinct a.is_bileto, a.numero_venda_ir, a.data_cancelamento, a.numero_cancelamento_ir, a.valor_compra_cancelada_total&#xA;into #tmpCancelado&#xA;from dsVendaCanceladaLegadoHist a&#xA;&#xA;insert into #tmpCancelado&#xA;select distinct a.is_bileto, a.numero_venda_ir, a.data_cancelamento, a.numero_cancelamento_ir, a.valor_compra_cancelada_total&#xA;from dsVendaCanceladaBiletoHist a&#xA;&#xA;-- Criando score card cancelamento (legado)&#xA;select is_bileto, numero_venda_ir, sum(valor_compra_cancelada_total) as TotalCancelado, min(convert(date, data_cancelamento)) as DataPrimeiroCancelamento&#xA;into #tmp_CancelamentoScoreCard&#xA;from dsVendaCanceladaLegadoHist &#xA;group by is_bileto, numero_venda_ir&#xA;&#xA;-- Score card cancelamento (bileto)&#xA;insert into #tmp_CancelamentoScoreCard&#xA;select is_bileto, numero_venda_ir, sum(valor_compra_cancelada_total) as TotalCancelado, min(convert(date, data_cancelamento)) as DataPrimeiroCancelamento&#xA;from dsVendaCanceladaBiletoHist &#xA;group by is_bileto, numero_venda_ir&#xA;&#xA;-- Atualizando na dimVenda&#xA;update dimVenda&#xA;set IsCancelada = 1, &#xA;ValorCancelado = TotalCancelado, &#xA;DataCancelamento = DataPrimeiroCancelamento&#xA;from dimVenda a&#xA;inner join #tmp_CancelamentoScoreCard b on a.numero_venda_ir = b.numero_venda_ir&#xA;&#x9;&#x9;&#x9;and a.is_bileto = b.is_bileto&#xA;&#xA;update fatConciliacaoVenda&#xA;set ValorCanceladoVenda = c.TotalCancelado&#xA;from fatConciliacaoVenda a &#xA;inner join dimVenda b on a.IdVenda = b.IdVenda&#xA;inner join #tmp_CancelamentoScoreCard c on b.numero_venda_ir = c.numero_venda_ir&#xA;&#x9;&#x9;&#x9;and b.is_bileto = c.is_bileto&#xA;&#xA;drop table #tmpCancelado&#xA;drop table #tmp_CancelamentoScoreCard&#xA;&#xA;-- Para fins de comparação com valores capturados pela adquirente. &#xA;-- Quando uma transação é cancelada no mesmo dia, esta não é considerada pela Adquirente. &#xA;update dimVenda&#xA;set IsCanceladaMesmoDia = 1&#xA;where DataCancelamento is not null&#xA;and DATEDIFF(d, convert(date, data_compra), DataCancelamento) = 0&#xA;&#xA;-- Atualizando informações da Equals:&#xA;&#xA;-- Marca as Transações cuja venda foi cancelada. &#xA;update dimTransacaoAdquirente &#xA;set IsCanceladoVenda = 1&#xA;from dimTransacaoAdquirente a&#xA;inner join fatConciliacaoVenda b on a.IdTransacaoAdquirente = b.IdTransacaoAdquirente&#xA;inner join dimVenda c on b.IdVenda = c.IdVenda&#xA;where c.IsCancelada = 1 and a.IdTransacaoAdquirente &lt;&gt; -1&#xA;&#xA;-- Atualiza o valor do CBK real. &#xA;update fatTransacaoAdquirente &#xA;set ValorChargebackReal = a.ValorChargeback&#xA;from fatTransacaoAdquirente a&#xA;inner join dimTransacaoAdquirente b on a.IdTransacaoAdquirente = b.IdTransacaoAdquirente&#xA;where b.IsChargeback = 1 &#xA;and b.IsCanceladoVenda = 0&#xA;and isnull(a.ValorEstornoCancelamento, 0) = 0&#xA;and b.IsCanceladoPagamento = 0 &#xA;&#xA;&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          SQLTask:SqlStatementSource="-- Separando os cancelamentos&#xA;select distinct a.is_bileto, a.numero_venda_ir, a.data_cancelamento, a.numero_cancelamento_ir, a.valor_compra_cancelada_total&#xA;into #tmpCancelado&#xA;from dsVendaCanceladaLegadoHist a&#xA;&#xA;insert into #tmpCancelado&#xA;select distinct a.is_bileto, a.numero_venda_ir, a.data_cancelamento, a.numero_cancelamento_ir, a.valor_compra_cancelada_total&#xA;from dsVendaCanceladaBiletoHist a&#xA;&#xA;insert into #tmpCancelado&#xA;select distinct a.is_bileto, a.numero_venda_ir, a.data_cancelamento, a.numero_cancelamento_ir, a.valor_compra_cancelada_total&#xA;from dsVendaCanceladaBileto a&#xA;&#xA;insert into #tmpCancelado&#xA;select distinct a.is_bileto, a.numero_venda_ir, a.data_cancelamento, a.numero_cancelamento_ir, a.valor_compra_cancelada_total&#xA;from dsVendaCanceladaLegado a&#xA;&#xA;-- Criando score card cancelamento (legado)&#xA;select is_bileto, numero_venda_ir, sum(valor_compra_cancelada_total) as TotalCancelado, min(convert(date, data_cancelamento)) as DataPrimeiroCancelamento&#xA;into #tmp_CancelamentoScoreCard&#xA;from dsVendaCanceladaLegadoHist &#xA;group by is_bileto, numero_venda_ir&#xA;&#xA;-- Score card cancelamento (bileto)&#xA;insert into #tmp_CancelamentoScoreCard&#xA;select is_bileto, numero_venda_ir, sum(valor_compra_cancelada_total) as TotalCancelado, min(convert(date, data_cancelamento)) as DataPrimeiroCancelamento&#xA;from dsVendaCanceladaBiletoHist &#xA;group by is_bileto, numero_venda_ir&#xA;&#xA;-- Atualizando na dimVenda&#xA;update dimVenda&#xA;set IsCancelada = 1, &#xA;ValorCancelado = TotalCancelado, &#xA;DataCancelamento = DataPrimeiroCancelamento&#xA;from dimVenda a&#xA;inner join #tmp_CancelamentoScoreCard b on a.numero_venda_ir = b.numero_venda_ir&#xA;&#x9;&#x9;&#x9;and a.is_bileto = b.is_bileto&#xA;&#xA;update fatConciliacaoVenda&#xA;set ValorCanceladoVenda = c.TotalCancelado&#xA;from fatConciliacaoVenda a &#xA;inner join dimVenda b on a.IdVenda = b.IdVenda&#xA;inner join #tmp_CancelamentoScoreCard c on b.numero_venda_ir = c.numero_venda_ir&#xA;&#x9;&#x9;&#x9;and b.is_bileto = c.is_bileto&#xA;&#xA;drop table #tmpCancelado&#xA;drop table #tmp_CancelamentoScoreCard&#xA;&#xA;-- Para fins de comparação com valores capturados pela adquirente. &#xA;-- Quando uma transação é cancelada no mesmo dia, esta não é considerada pela Adquirente. &#xA;update dimVenda&#xA;set IsCanceladaMesmoDia = 1&#xA;where DataCancelamento is not null&#xA;and DATEDIFF(d, convert(date, data_compra), DataCancelamento) = 0&#xA;&#xA;-- Atualizando informações da Equals:&#xA;&#xA;-- Marca as Transações cuja venda foi cancelada. &#xA;update dimTransacaoAdquirente &#xA;set IsCanceladoVenda = 1&#xA;from dimTransacaoAdquirente a&#xA;inner join fatConciliacaoVenda b on a.IdTransacaoAdquirente = b.IdTransacaoAdquirente&#xA;inner join dimVenda c on b.IdVenda = c.IdVenda&#xA;where c.IsCancelada = 1 and a.IdTransacaoAdquirente &lt;&gt; -1&#xA;&#xA;&#xA;-- Atualiza o valor do CBK real. &#xA;update fatTransacaoAdquirente &#xA;set ValorChargebackReal = 0&#xA;&#xA;update fatTransacaoAdquirente &#xA;set ValorChargebackReal = a.ValorChargeback&#xA;from fatTransacaoAdquirente a&#xA;inner join dimTransacaoAdquirente b on a.IdTransacaoAdquirente = b.IdTransacaoAdquirente&#xA;where b.IsChargeback = 1 &#xA;and b.IsCanceladoVenda = 0&#xA;and isnull(a.ValorEstornoCancelamento, 0) = 0&#xA;and b.IsCanceladoPagamento = 0 &#xA;&#xA;&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
@@ -435,7 +435,7 @@
       DTS:LocaleID="-1"
       DTS:ObjectName="Set Lote into fatTransacaoAdquirente"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2016; © 2015 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="1">
+      DTS:ThreadHint="0">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -452,7 +452,7 @@
       DTS:LocaleID="-1"
       DTS:ObjectName="set Situacao"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2016; © 2015 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="0">
+      DTS:ThreadHint="3">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -469,7 +469,7 @@
       DTS:LocaleID="-1"
       DTS:ObjectName="Set StatusCancelamento"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2016; © 2015 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="0">
+      DTS:ThreadHint="3">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -486,7 +486,7 @@
       DTS:LocaleID="-1"
       DTS:ObjectName="Set TransacaoIR fatTransacao"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2016; © 2015 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="0">
+      DTS:ThreadHint="3">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -507,7 +507,7 @@
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
           SQLTask:Connection="{D31E9785-7BAF-404F-A81A-B07A29CDECFA}"
-          SQLTask:SqlStatementSource="-- Seta a Venda da Transação&#xA;update fatTransacaoAdquirente &#xA;set IdVenda = b.IdVenda &#xA;from fatTransacaoAdquirente a&#xA;inner join fatConciliacaoVenda b on a.IdTransacaoAdquirente = b.IdTransacaoAdquirente&#xA;where a.IdTransacaoAdquirente &lt;&gt; -1&#xA;&#xA;&#xA;drop table #tmp&#xA;&#xA;-- Legado Ativo&#xA;select is_bileto, &#xA;&#x9;&#x9;numero_venda_ir,  &#xA;&#x9;&#x9;plataforma_utilizada, &#xA;&#x9;&#x9;nome_evento as NomeEvento, &#xA;&#x9;&#x9;id_evento, &#xA;&#x9;&#x9;min(data_evento) as DataEvento, &#xA;&#x9;&#x9;nome_local, &#xA;&#x9;&#x9;tipo_evento &#xA;into #tmp&#xA;from dsVendaAtivaLegadoHist&#xA;group by is_bileto, &#xA;&#x9;&#x9;numero_venda_ir,  &#xA;&#x9;&#x9;plataforma_utilizada, &#xA;&#x9;&#x9;nome_evento, &#xA;&#x9;&#x9;id_evento, &#xA;&#x9;&#x9;nome_local, &#xA;&#x9;&#x9;tipo_evento &#xA;-- Legado cancelado&#xA;insert into #tmp&#xA;select is_bileto, &#xA;&#x9;&#x9;numero_venda_ir,  &#xA;&#x9;&#x9;plataforma_utilizada, &#xA;&#x9;&#x9;nome_evento as NomeEvento, &#xA;&#x9;&#x9;id_evento, &#xA;&#x9;&#x9;min(data_evento) as DataEvento, &#xA;&#x9;&#x9;nome_local, &#xA;&#x9;&#x9;tipo_evento &#xA;from dsVendaCanceladaLegadoHist&#xA;group by is_bileto, &#xA;&#x9;&#x9;numero_venda_ir,  &#xA;&#x9;&#x9;plataforma_utilizada, &#xA;&#x9;&#x9;nome_evento, &#xA;&#x9;&#x9;id_evento, &#xA;&#x9;&#x9;nome_local, &#xA;&#x9;&#x9;tipo_evento &#xA;-- Bileto Ativo&#xA;insert into #tmp&#xA;select is_bileto, &#xA;&#x9;&#x9;numero_venda_ir,  &#xA;&#x9;&#x9;plataforma_utilizada, &#xA;&#x9;&#x9;nome_evento as NomeEvento, &#xA;&#x9;&#x9;id_evento, &#xA;&#x9;&#x9;min(data_evento) as DataEvento, &#xA;&#x9;&#x9;nome_local, &#xA;&#x9;&#x9;tipo_evento &#xA;from dsVendaAtivaBiletoHist&#xA;group by is_bileto, &#xA;&#x9;&#x9;numero_venda_ir,  &#xA;&#x9;&#x9;plataforma_utilizada, &#xA;&#x9;&#x9;nome_evento, &#xA;&#x9;&#x9;id_evento, &#xA;&#x9;&#x9;nome_local, &#xA;&#x9;&#x9;tipo_evento &#xA;-- Bileto cancelado&#xA;insert into #tmp&#xA;select is_bileto, &#xA;&#x9;&#x9;numero_venda_ir,  &#xA;&#x9;&#x9;plataforma_utilizada, &#xA;&#x9;&#x9;nome_evento as NomeEvento, &#xA;&#x9;&#x9;id_evento, &#xA;&#x9;&#x9;min(data_evento) as DataEvento, &#xA;&#x9;&#x9;nome_local, &#xA;&#x9;&#x9;tipo_evento &#xA;from dsVendaCanceladaBiletoHist&#xA;group by is_bileto, &#xA;&#x9;&#x9;numero_venda_ir,  &#xA;&#x9;&#x9;plataforma_utilizada, &#xA;&#x9;&#x9;nome_evento, &#xA;&#x9;&#x9;id_evento, &#xA;&#x9;&#x9;nome_local, &#xA;&#x9;&#x9;tipo_evento &#xA;&#xA;&#xA;update dimVenda &#xA;set NomeEvento = b.NomeEvento, &#xA;DataEvento = b.DataEvento, &#xA;NomeLocal = b.nome_local, &#xA;TipoEvento = b.tipo_evento, &#xA;plataforma_utilizada = b.plataforma_utilizada&#xA;from dimVenda a&#xA;inner join #tmp b on a.is_bileto = b.is_bileto&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;and a.numero_venda_ir = b.numero_venda_ir&#xA;&#xA;drop table #tmp" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          SQLTask:SqlStatementSource="-- Seta a Venda da Transação&#xA;update fatTransacaoAdquirente &#xA;set IdVenda = b.IdVenda &#xA;from fatTransacaoAdquirente a&#xA;inner join fatConciliacaoVenda b on a.IdTransacaoAdquirente = b.IdTransacaoAdquirente&#xA;where a.IdTransacaoAdquirente &lt;&gt; -1&#xA;&#xA;&#xA;-- Legado Ativo&#xA;select is_bileto, &#xA;&#x9;&#x9;numero_venda_ir,  &#xA;&#x9;&#x9;plataforma_utilizada, &#xA;&#x9;&#x9;nome_evento as NomeEvento, &#xA;&#x9;&#x9;id_evento, &#xA;&#x9;&#x9;min(data_evento) as DataEvento, &#xA;&#x9;&#x9;nome_local, &#xA;&#x9;&#x9;tipo_evento &#xA;into #tmp&#xA;from dsVendaAtivaLegadoHist&#xA;group by is_bileto, &#xA;&#x9;&#x9;numero_venda_ir,  &#xA;&#x9;&#x9;plataforma_utilizada, &#xA;&#x9;&#x9;nome_evento, &#xA;&#x9;&#x9;id_evento, &#xA;&#x9;&#x9;nome_local, &#xA;&#x9;&#x9;tipo_evento &#xA;-- Legado cancelado&#xA;insert into #tmp&#xA;select is_bileto, &#xA;&#x9;&#x9;numero_venda_ir,  &#xA;&#x9;&#x9;plataforma_utilizada, &#xA;&#x9;&#x9;nome_evento as NomeEvento, &#xA;&#x9;&#x9;id_evento, &#xA;&#x9;&#x9;min(data_evento) as DataEvento, &#xA;&#x9;&#x9;nome_local, &#xA;&#x9;&#x9;tipo_evento &#xA;from dsVendaCanceladaLegadoHist&#xA;group by is_bileto, &#xA;&#x9;&#x9;numero_venda_ir,  &#xA;&#x9;&#x9;plataforma_utilizada, &#xA;&#x9;&#x9;nome_evento, &#xA;&#x9;&#x9;id_evento, &#xA;&#x9;&#x9;nome_local, &#xA;&#x9;&#x9;tipo_evento &#xA;-- Bileto Ativo&#xA;insert into #tmp&#xA;select is_bileto, &#xA;&#x9;&#x9;numero_venda_ir,  &#xA;&#x9;&#x9;plataforma_utilizada, &#xA;&#x9;&#x9;nome_evento as NomeEvento, &#xA;&#x9;&#x9;id_evento, &#xA;&#x9;&#x9;min(data_evento) as DataEvento, &#xA;&#x9;&#x9;nome_local, &#xA;&#x9;&#x9;tipo_evento &#xA;from dsVendaAtivaBiletoHist&#xA;group by is_bileto, &#xA;&#x9;&#x9;numero_venda_ir,  &#xA;&#x9;&#x9;plataforma_utilizada, &#xA;&#x9;&#x9;nome_evento, &#xA;&#x9;&#x9;id_evento, &#xA;&#x9;&#x9;nome_local, &#xA;&#x9;&#x9;tipo_evento &#xA;-- Bileto cancelado&#xA;insert into #tmp&#xA;select is_bileto, &#xA;&#x9;&#x9;numero_venda_ir,  &#xA;&#x9;&#x9;plataforma_utilizada, &#xA;&#x9;&#x9;nome_evento as NomeEvento, &#xA;&#x9;&#x9;id_evento, &#xA;&#x9;&#x9;min(data_evento) as DataEvento, &#xA;&#x9;&#x9;nome_local, &#xA;&#x9;&#x9;tipo_evento &#xA;from dsVendaCanceladaBiletoHist&#xA;group by is_bileto, &#xA;&#x9;&#x9;numero_venda_ir,  &#xA;&#x9;&#x9;plataforma_utilizada, &#xA;&#x9;&#x9;nome_evento, &#xA;&#x9;&#x9;id_evento, &#xA;&#x9;&#x9;nome_local, &#xA;&#x9;&#x9;tipo_evento &#xA;&#xA;&#xA;update dimVenda &#xA;set NomeEvento = b.NomeEvento, &#xA;DataEvento = b.DataEvento, &#xA;NomeLocal = b.nome_local, &#xA;TipoEvento = b.tipo_evento, &#xA;plataforma_utilizada = b.plataforma_utilizada&#xA;from dimVenda a&#xA;inner join #tmp b on a.is_bileto = b.is_bileto&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;and a.numero_venda_ir = b.numero_venda_ir&#xA;&#xA;drop table #tmp" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
   </DTS:Executables>
@@ -846,7 +846,7 @@
           Id="Package\Load fatConciliacaoLoteVenda"
           TopLeft="1229,552" />
         <NodeLayout
-          Size="201,42"
+          Size="199,42"
           Id="Package\Load fatConciliacaoVenda"
           TopLeft="1006,474" />
         <NodeLayout
@@ -885,6 +885,10 @@
           Size="221,42"
           Id="Package\Set TransacaoIR fatTransacao"
           TopLeft="1469.46428571429,220.285714285714" />
+        <NodeLayout
+          Size="193,42"
+          Id="Package\Set Venda da Transacao"
+          TopLeft="1011.5,558.5" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
           TopLeft="648.75,119">
@@ -1295,26 +1299,26 @@
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-835.6,361.5"
+              EndConnector="-837.2,361.5"
               Start="0,0"
-              End="-835.6,354">
+              End="-837.2,354">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,249.883647798742" />
+                    End="0,249.840860973888" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,249.883647798742"
-                    Point2="0,253.883647798742"
-                    Point3="-4,253.883647798742" />
+                    Point1="0,249.840860973888"
+                    Point2="0,253.840860973888"
+                    Point3="-4,253.840860973888" />
                   <mssgle:LineSegment
-                    End="-831.6,253.883647798742" />
+                    End="-833.2,253.840860973888" />
                   <mssgle:CubicBezierSegment
-                    Point1="-831.6,253.883647798742"
-                    Point2="-835.6,253.883647798742"
-                    Point3="-835.6,257.883647798742" />
+                    Point1="-833.2,253.840860973888"
+                    Point2="-837.2,253.840860973888"
+                    Point3="-837.2,257.840860973888" />
                   <mssgle:LineSegment
-                    End="-835.6,354" />
+                    End="-837.2,354" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1329,26 +1333,26 @@
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="132.97380952381,51.535714285714"
+              EndConnector="132.17380952381,51.535714285714"
               Start="0,0"
-              End="132.97380952381,44.035714285714">
+              End="132.17380952381,44.035714285714">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,19.5609891327904" />
+                    End="0,19.5597228270302" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,19.5609891327904"
-                    Point2="0,23.5609891327904"
-                    Point3="4,23.5609891327904" />
+                    Point1="0,19.5597228270302"
+                    Point2="0,23.5597228270302"
+                    Point3="4,23.5597228270302" />
                   <mssgle:LineSegment
-                    End="128.97380952381,23.5609891327904" />
+                    End="128.17380952381,23.5597228270302" />
                   <mssgle:CubicBezierSegment
-                    Point1="128.97380952381,23.5609891327904"
-                    Point2="132.97380952381,23.5609891327904"
-                    Point3="132.97380952381,27.5609891327904" />
+                    Point1="128.17380952381,23.5597228270302"
+                    Point2="132.17380952381,23.5597228270302"
+                    Point3="132.17380952381,27.5597228270302" />
                   <mssgle:LineSegment
-                    End="132.97380952381,44.035714285714" />
+                    End="132.17380952381,44.035714285714" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1363,26 +1367,26 @@
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="408.885714285714,126.428571428571"
+              EndConnector="408.485714285714,126.428571428571"
               Start="0,0"
-              End="408.885714285714,118.928571428571">
+              End="408.485714285714,118.928571428571">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,73.7561084206544" />
+                    End="0,73.7391628376794" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,73.7561084206544"
-                    Point2="0,77.7561084206544"
-                    Point3="4,77.7561084206544" />
+                    Point1="0,73.7391628376794"
+                    Point2="0,77.7391628376794"
+                    Point3="4,77.7391628376794" />
                   <mssgle:LineSegment
-                    End="404.885714285714,77.7561084206544" />
+                    End="404.485714285714,77.7391628376794" />
                   <mssgle:CubicBezierSegment
-                    Point1="404.885714285714,77.7561084206544"
-                    Point2="408.885714285714,77.7561084206544"
-                    Point3="408.885714285714,81.7561084206544" />
+                    Point1="404.485714285714,77.7391628376794"
+                    Point2="408.485714285714,77.7391628376794"
+                    Point3="408.485714285714,81.7391628376794" />
                   <mssgle:LineSegment
-                    End="408.885714285714,118.928571428571" />
+                    End="408.485714285714,118.928571428571" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1393,18 +1397,18 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 24]"
-          TopLeft="1207,495">
+          TopLeft="1205,495">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="35,0"
+              EndConnector="37,0"
               Start="0,0"
-              End="27.5,0">
+              End="29.5,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="27.5,0" />
+                    End="29.5,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1441,26 +1445,48 @@
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-651.7,272"
+              EndConnector="-652.9,272"
               Start="0,0"
-              End="-651.7,264.5">
+              End="-652.9,264.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,146.445789763346" />
+                    End="0,146.439132851584" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,146.445789763346"
-                    Point2="0,150.445789763346"
-                    Point3="-4,150.445789763346" />
+                    Point1="0,146.439132851584"
+                    Point2="0,150.439132851584"
+                    Point3="-4,150.439132851584" />
                   <mssgle:LineSegment
-                    End="-647.7,150.445789763346" />
+                    End="-648.9,150.439132851584" />
                   <mssgle:CubicBezierSegment
-                    Point1="-647.7,150.445789763346"
-                    Point2="-651.7,150.445789763346"
-                    Point3="-651.7,154.445789763346" />
+                    Point1="-648.9,150.439132851584"
+                    Point2="-652.9,150.439132851584"
+                    Point3="-652.9,154.439132851584" />
                   <mssgle:LineSegment
-                    End="-651.7,264.5" />
+                    End="-652.9,264.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 27]"
+          TopLeft="1229,576.25">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-24.5,0"
+              Start="0,0"
+              End="-17,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-17,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1551,6 +1577,28 @@
                     Point3="-199.071428571429,60.9155178508307" />
                   <mssgle:LineSegment
                     End="-199.071428571429,98.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 30]"
+          TopLeft="1011.5,578.75">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-42.5,0"
+              Start="0,0"
+              End="-35,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-35,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1710,54 +1758,6 @@
           Size="221,40"
           Id="6a390957-76cd-49ec-944f-eb7f0c9258e3"
           TopLeft="1137.75,29" />
-        <NodeLayout
-          Size="193,42"
-          Id="Package\Set Venda da Transacao"
-          TopLeft="1011.5,558.5" />
-        <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint 27]"
-          TopLeft="1229,576.25">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-24.5,0"
-              Start="0,0"
-              End="-17,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="-17,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint 30]"
-          TopLeft="1011.5,578.75">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-42.5,0"
-              Start="0,0"
-              End="-35,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="-35,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </Package>
